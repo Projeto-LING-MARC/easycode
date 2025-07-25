@@ -1,32 +1,49 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Easy Code</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Easy Code</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <nav id="menu_links">
-    <div id="menu_logo">
-        <div>Logo</div>
-        <div>
-            <ul>
-                <li>Sobre o Proejeto</li>
-                <li>Alunos Criadores</li>
-                <li>Conteúdo do Curso</li>
-            </ul>
+  <header>
+    <div class="topbar">
+      <div class="logo">Easy <span>Code</span></div>
+      <nav class="menu">
+        <div class="nav-lista">
+          <button>Sobre o Projeto</button>
+          <button>Alunos Criadores</button>
+          <button>Conteúdo do Curso</button>
         </div>
+        <div class="divider"></div>
+        <div class="nav-lista1">
+          <button>Editor</button>
+          <button>Tire Dúvidas com IA</button>
+        </div>
+        <div class="nav-destaque">
+          <button class="btn-destaque">COMECE A APRENDER!</button>
+        </div>
+      </nav>
     </div>
+  </header>
 
-    <div id="menu_etc">
-        <div>Editor</div>
-        <div>Tire Duvidas</div>
-        <button type="button">Começe a Aprender</button>
-    </div>
-
-    </nav>
-    
-
+  <main>
+    <section class="conteudo">
+      <div class="texto">
+        <h2>Aprenda <br><span>HTML & CSS</span></h2>
+        <p>Aprenda a criar sites usando HTML e CSS com este guia simples de seguir para iniciantes.</p>
+        <a href="#" class="btn-destaque">COMECE A APRENDER!</a>
+      </div>
+      <div class="card-codigo">
+        <div class="editor">
+          <pre><code>&lt;h1&gt;Olá, Mundo!&lt;/h1&gt;</code></pre>
+        </div>
+        <div class="preview">
+          <h1>Olá, Mundo!</h1>
+        </div>
+      </div>
+    </section>
+  </main>
 </body>
 </html>
