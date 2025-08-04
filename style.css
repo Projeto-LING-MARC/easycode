@@ -16,7 +16,7 @@ header {
   padding: 0;
 }
 
-.topbar {
+.topbar_header {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -24,24 +24,24 @@ header {
   padding: 15px 30px;
 }
 
-.logo {
+.logo_header {
   font-size: 24px;
   font-weight: bold;
   color: #fff;
 }
 
-.logo span {
+.logo_header span {
   color: #3498db;
 }
 
 /* Menu dividido */
-.menu {
+.menu_header {
   display: flex;
   align-items: center;
   gap: 15px;
 }
 
-.nav-lista button {
+.nav-lista_header button {
   margin-right: 10px;
   background-color: transparent;
   border: 1px solid #555;
@@ -52,18 +52,18 @@ header {
   transition: 0.3s;
 }
 
-.nav-lista button:hover {
+.nav-lista_header button:hover {
   background-color: #333;
 }
 
-.divider {
+.divider_header {
   width: 2px;
   height: 30px;
   background-color: #444;
   margin: 0 15px;
 }
 
-.nav-lista1 button {
+.nav-lista1_header button {
   margin-right: 10px;
   background-color: transparent;
   border: 1px solid #555;
@@ -74,18 +74,11 @@ header {
   transition: 0.3s;
 }
 
-.nav-lista1 button:hover {
+.nav-lista1_header button:hover {
   background-color: #333;
 }
 
-.divider {
-  width: 2px;
-  height: 30px;
-  background-color: #444;
-  margin: 0 15px;
-}
-
-.nav-destaque .btn-destaque {
+.nav-destaque_header .btn-destaque_header {
   background-color: #0066ff;
   color: #fff;
   border: none;
@@ -95,7 +88,7 @@ header {
   cursor: pointer;
 }
 
-.nav-destaque .btn-destaque:hover {
+.nav-destaque_header .btn-destaque_header:hover {
   background-color: #0052cc;
 }
 
@@ -180,4 +173,3 @@ main {
 /* section4 - o que será aplicado a todos elementos na section1*/
 
 /* footer - o que será aplicado a todos elementos no rodapé*/
-
