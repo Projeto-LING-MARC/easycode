@@ -167,28 +167,37 @@ main {
 
 /* section2 - o que será aplicado a todos elementos na section2*/
 
+/* SECTION 2 - SOBRE O PROJETO */
+
+/* Espaçamento entre as sections */
 .section2 {
     width: 100%;
     margin-top: 100px;
 }
 
+/* Faixa azul com sombra e bordas arredondadas */
 .infoProjeto_section2 {
-    background-color: #0066ff;
-    padding: 20px;
+    background-color: #2196f3;
+    padding: 40px 20px;
     color: white;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    border-radius: 12px;
 }
 
+/* Grid Responsiva com Áreas Nomeadas */
 .gridInfo_section2 {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     grid-template-areas:
         "titulo_section2 titulo_section2 titulo_section2"
         "colunaObjetivos_section2 colunaFerramentas_section2 colunaMetodologia_section2";
-    gap: 20px;
+    gap: 30px;
     text-align: center;
     min-height: 250px;
+    align-items: center;
 }
 
+/* Definição das Áreas do Grid */
 .titulo_section2 {
     grid-area: titulo_section2;
 }
@@ -205,29 +214,56 @@ main {
     grid-area: colunaMetodologia_section2;
 }
 
-/* Centralizando conteúdo verticalmente */
-.colunaObjetivos_section2, .colunaFerramentas_section2, .colunaMetodologia_section2 {
+/* Centralização do Conteúdo das Colunas */
+.colunaObjetivos_section2, 
+.colunaFerramentas_section2, 
+.colunaMetodologia_section2 {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
+/* Título Principal (Sobre o Projeto) */
 .titulo_section2 h2 {
-    color: black;
-    font-size: 2rem;
-    margin-bottom: 0;
-}
-
-.subtitulo_section2 {
-    color: black;
+    color: #fff;
+    font-size: 2.5rem;
     margin-bottom: 10px;
 }
 
-.paragrafo_section2 {
-    margin: 10px 0;
-    text-align: left;
+/* Subtítulos das Colunas (Objetivos, Ferramentas, Metodologia) */
+.subtitulo_section2 {
+    font-size: 1.3rem;
+    color: #ffffff;
+    border-bottom: 2px solid #ffffff;
+    display: inline-block;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
 }
+
+/* Descrição Geral (abaixo do título principal) */
+.descricao_section2 {
+    font-size: 1.1rem;
+    color: #e0e0e0;
+    margin-bottom: 20px;
+}
+
+/* Parágrafos dentro das Colunas */
+.paragrafo_section2 {
+    font-size: 0.95rem;
+    color: #e0e0e0;
+    margin: 5px 0;
+}
+
+/* Efeito Hover nas Colunas - Animação Suave */
+.colunaObjetivos_section2:hover,
+.colunaFerramentas_section2:hover,
+.colunaMetodologia_section2:hover {
+    transform: translateY(-5px);
+    transition: 0.3s ease;
+}
+
+
 
 /* section3 - o que será aplicado a todos elementos na section1*/
 
