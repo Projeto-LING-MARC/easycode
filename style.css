@@ -98,6 +98,8 @@ header {
 
 /* Conteúdo Principal */
 main {
+  padding: 40px 20px;
+  justify-content: center;
   display: flex;
   flex-direction: column;
   align-items: center;  
@@ -170,7 +172,79 @@ main {
 
 /* section1 - o que será aplicado a todos elementos na section1 */
 
-/* section2 - o que será aplicado a todos elementos na section1*/
+/* section2 - o que será aplicado a todos elementos na section2*/
+
+/* SECTION 2 - SOBRE O PROJETO */
+
+/* Espaçamento entre as sections */
+.section2 {
+    width: 100%;
+    margin-top: 100px;
+}
+
+.infoProjeto_section2 {
+    background: linear-gradient(135deg, #2196f3, #1e88e5);
+    padding: 50px 20px;
+    color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.titulo_section2 {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.titulo_section2 h2 {
+    font-size: 2.8rem;
+    margin-bottom: 10px;
+}
+
+.descricao_section2 {
+    font-size: 1.2rem;
+    color: #e0e0e0;
+}
+
+.gridInfo_section2 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    justify-content: center;
+}
+
+.card {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 25px 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+}
+
+.subtitulo_section2 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    color: #fff;
+    border-bottom: 2px solid #ffffff;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.lista_section2 {
+    list-style-type: disc;
+    padding-left: 20px;
+    text-align: left;
+}
+
+.lista_section2 li {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+    color: #e0e0e0;
+}
 
 /* section3 - o que será aplicado a todos elementos na section1*/
 
@@ -197,16 +271,14 @@ body {
     color: #dddddd;
     margin-bottom: 50px;
 }
-
-/* Container que agrupa todos os perfis - USANDO CSS GRID */
 .perfiscontainer_section3 {
-  display: grid; /* Trocamos flex por grid */
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 1000px; 
   gap: 40px;
-  width: 100%;
-  max-width: 1000px; /* Definimos uma largura máxima para o grid */
-  margin: 0 auto; /* Centraliza o grid na página */
 }
+
 /* Estilo dos Cartões de Perfil */
 .LucasPereira_section,
 .luizHenrique_section,

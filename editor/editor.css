@@ -1,0 +1,77 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+/* Corpo da página */
+body {
+    background-color: #050030; /* fundo escuro */
+    color: #e0e0e0;           /* texto claro */
+    font-family: 'Segoe UI', sans-serif;
+    padding: 20px;
+}
+
+/* Header */
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    color: #ffffff;
+}
+
+/* Container principal */
+.main-container {
+    display: flex;
+    gap: 20px;
+    height: 80vh;
+}
+
+/* Editor (HTML e CSS) */
+.editor-area {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Títulos das áreas */
+.editor-area label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+/* Textareas */
+textarea {
+    flex: 1;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #333;
+    font-family: monospace;
+    font-size: 14px;
+    background-color: #00255e;
+    color: #f5f5f5;
+    resize: none;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+}
+
+/* Preview */
+iframe {
+    flex: 1;
+    border-radius: 8px;
+    border: 1px solid #333;
+    background-color: #ffffff;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+}
+
+/* Responsividade */
+@media(max-width: 900px) {
+    .main-container {
+        flex-direction: column;
+        height: auto;
+    }
+}
