@@ -246,8 +246,6 @@ main {
     color: #e0e0e0;
 }
 
-
-
 /* section3 - o que será aplicado a todos elementos na section1*/
 
 body {
@@ -273,16 +271,14 @@ body {
     color: #dddddd;
     margin-bottom: 50px;
 }
-
-/* Container que agrupa todos os perfis - USANDO CSS GRID */
 .perfiscontainer_section3 {
-  display: grid; /* Trocamos flex por grid */
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 1000px; 
   gap: 40px;
-  width: 100%;
-  max-width: 1000px; /* Definimos uma largura máxima para o grid */
-  margin: 0 auto; /* Centraliza o grid na página */
 }
+
 /* Estilo dos Cartões de Perfil */
 .LucasPereira_section,
 .luizHenrique_section,
