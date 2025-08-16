@@ -293,7 +293,7 @@ body {
     flex-direction: column;
     align-items: center;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); 
-    transition: transform 0.3s ease; /* Efeito suave ao passar o mouse */
+    transition: transform 0.3s ease; 
 }
 
 /* Efeito de levantar o cartão ao passar o mouse */
@@ -303,7 +303,6 @@ body {
 .Kaik_section:hover,
 .Ruan_section:hover {
     transform: translateY(-10px);
-    /* Sombra mais pronunciada no hover para dar efeito de elevação */
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
 }
 
@@ -312,57 +311,53 @@ body {
 .imagemperfilcriadores_section3 {
     width: 180px;
     height: 180px;
-    border-radius: 50%; /* Deixa a imagem redonda */
+    border-radius: 50%;
     object-fit: cover;
     object-position: center top 5%; 
     background-color: #333;
     margin-bottom: 20px;
-    border: 3px solid #007bff; /* Borda azul na imagem */
+    border: 3px solid #007bff; 
     transition: filter 0.3s ease;
 }
 
 /* Nome do aluno dentro do cartão */
 .nome_criadores_section3 {
-    font-size: 1.2rem; /* Ajustei o tamanho da fonte */
+    font-size: 1.2rem;
     font-weight: 700;
     color: #0052cc; 
     margin: 0;
 }
 /*Estilo para os Links Sociais */
-
 .redessociais_section3 {
   margin-top: 15px;
   display: flex;
   gap: 20px;
 }
-
-/* Estiliza o link <a> como um container flex para alinhar o texto e o ícone */
 .redessociais_section3 a {
-  display: flex; /* Alinha o texto e o ícone na mesma linha */
-  align-items: center; /* Centraliza verticalmente o texto e o ícone */
-  gap: 8px; /* Adiciona um pequeno espaço entre o texto e o ícone */
-  
-  color: #ffffff; /* Cor do ícone */
-  text-decoration: none; /* Remove o sublinhado padrão do link */
+  display: flex; 
+  align-items: center; 
+  gap: 8px;  
+  color: #ffffff; 
+  text-decoration: none; 
   transition: color 0.3s ease, transform 0.3s ease;
 }
 
 /* Estiliza o texto "Acesse o LinkedIn" */
 .redessociais_section3 a span {
-  font-size: 0.9rem; /* Tamanho da fonte para o texto */
+  font-size: 0.9rem; 
   font-weight: normal;
-  color: #cccccc; /* Uma cor um pouco mais suave para o texto */
+  color: #cccccc;
   transition: color 0.3s ease;
 }
 
 /* Efeito ao passar o mouse */
 .redessociais_section3 a:hover .fa-linkedin,
 .redessociais_section3 a:hover span {
-  color: #0e76a8; /* Muda a cor tanto do ícone quanto do texto */
+  color: #0e76a8; /
 }
 
 .redessociais_section3 a:hover .fa-linkedin {
-  transform: scale(1.2); /* Aumenta só o ícone */
+  transform: scale(1.2); 
 }
 
 /* section4 - o que será aplicado a todos elementos na section4*/
