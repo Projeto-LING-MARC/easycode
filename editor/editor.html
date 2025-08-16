@@ -1,38 +1,66 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Editor</title>
-    <link rel="stylesheet" href="editor.css">
-    <!-- Prism.js CSS -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Editor</title>
+  <link rel="stylesheet" href="editor.css">
 
+  <!-- CodeMirror CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/theme/dracula.min.css">
 </head>
 <body>
-    <header>
+  <header>
     <h1>Editor de HTML e CSS</h1>
-    </header>
+  </header>
 
-    <div class="main-container">
-        <div class="editor-area">
-            <label for="html">HTML</label>
-            <textarea id="html" placeholder="Digite o HTML aqui..."></textarea>
+  <div class="main-container">
+    <div class="editor-area">
+      <label for="html">HTML</label>
+      <textarea id="html"></textarea>
 
-            <label for="css">CSS</label>
-            <textarea id="css" placeholder="Digite o CSS aqui..."></textarea>
-        </div>
-
-    <iframe id="preview"></iframe>
+      <label for="css">CSS</label>
+      <textarea id="css"></textarea>
     </div>
 
-    <script src="editor.js"></script>
+    <iframe id="preview"></iframe>
+  </div>
 
-    <!-- Prism.js JS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-javascript.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-css.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-markup.min.js"></script>
+  <!-- CodeMirror JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/xml/xml.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/css/css.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/javascript/javascript.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/htmlmixed/htmlmixed.min.js"></script>
 
+  <script>
+    // Criando os editores
+    const htmlEditor = CodeMirror.fromTextArea(document.getElementById("html"), {
+      mode: "htmlmixed",
+      theme: "dracula",
+      lineNumbers: true,
+      tabSize: 2,
+    });
+
+    const cssEditor = CodeMirror.fromTextArea(document.getElementById("css"), {
+      mode: "css",
+      theme: "dracula",
+      lineNumbers: true,
+      tabSize: 2,
+    });
+
+    const preview = document.getElementById("preview");
+
+    function atualizarPreview() {
+      const htmlCode = htmlEditor.getValue();
+      const cssCode = `<style>${cssEditor.getValue()}</style>`;
+      preview.srcdoc = htmlCode + cssCode;
+    }
+
+    // Atualiza preview sempre que digitar
+    htmlEditor.on("change", atualizarPreview);
+    cssEditor.on("change", atualizarPreview);
+  </script>
 </body>
 </html>
