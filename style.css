@@ -173,10 +173,6 @@ main {
 
 /* main - o que será aplicado a todos os elementos na main */
 
-/* section1 - o que será aplicado a todos elementos na section1 */
-
-/* section2 - o que será aplicado a todos elementos na section2*/
-
 /* SECTION 2 - SOBRE O PROJETO */
 
 /* Espaçamento entre as sections */
@@ -485,7 +481,7 @@ main {
 .conteudo_html {
   margin-left: 24px;
   padding-left: 40px;
-  background-image: url("https://uploads-ssl.webflow.com/62434fa732124a0fb112aab4/62434fa732124ac2f812aadc_plus%20rotated.svg");
+  background-image: url(imagens/html.png);
   background-position: 0% 50%;
   background-size: auto;
   background-repeat: no-repeat;
@@ -504,7 +500,7 @@ main {
 .conteudo_css {
   margin-left: 24px;
   padding-left: 40px;
-  background-image: url("https://uploads-ssl.webflow.com/62434fa732124a0fb112aab4/62434fa732124a700a12aad4_check%20circle.svg");
+  background-image: url("imagens/css.png");
   background-position: 0% 50%;
   background-size: auto;
   background-repeat: no-repeat;
@@ -560,8 +556,13 @@ footer {
   }
 }
 
-.imagens_footer > .img_easycode {
+.imagens_footer > .img-easycode {
   width: 108px;
+  height: auto;
+}
+
+.imagens_footer > .img-ifpb {
+  width: 72px;
   height: auto;
 }
 
