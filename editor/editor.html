@@ -3,64 +3,100 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Editor</title>
+  <title>Editor | Easy Code</title>
+  
+  <link rel="stylesheet" href="../style.css">
   <link rel="stylesheet" href="editor.css">
 
-  <!-- CodeMirror CSS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/theme/dracula.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/addon/hint/show-hint.min.css">
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
 <body>
+  
   <header>
-    <h1>Editor de HTML e CSS</h1>
+    <div class="topbar_header" id="topbar_header">
+      <a href="../index.html" style="text-decoration: none; color: inherit;">
+        <div class="logo_header" id="logo_header">Easy <span>Code</span></div>
+      </a>
+      <nav class="menu_header" id="menu_header">
+        <div class="nav-lista_header" id="nav-lista_header">
+          <a href="../index.html#section2"><button>Sobre o Projeto</button></a>
+          <a href="../index.html#section3"><button>Alunos Criadores</button></a>
+          <a href="../index.html#section4"><button>Conteúdo do Curso</button></a>
+        </div>
+        <div class="divider_header" id="divider_header"></div>
+        <div class="nav-lista1_header" id="nav-lista1_header">
+          <a href="editor.html"><button>Editor</button></a>
+          <button>Tire Dúvidas com IA</button>
+        </div>
+        <div class="nav-destaque_header" id="nav-destaque_header">
+          <button class="btn-destaque_header" id="btn-destaque_header">COMECE A APRENDER!</button>
+        </div>
+      </nav>
+    </div>
   </header>
 
-  <div class="main-container">
-    <div class="editor-area">
-      <label for="html">HTML</label>
-      <textarea id="html"></textarea>
+  <main class="editor-main">
+    <div class="editor-page-container">
+      <div class="editor-title-area">
+        <h1>Editor de Código Interativo</h1>
+        <p>Escreva seu HTML e CSS e veja o resultado ao vivo! Pressione <strong>Ctrl + Espaço</strong> para ativar as sugestões.</p>
+        <div class="editor-controls">
+            <button id="clear-code-btn" class="btn-secondary">
+                <i class="fas fa-trash"></i> Limpar Tudo
+            </button>
+        </div>
+      </div>
 
-      <label for="css">CSS</label>
-      <textarea id="css"></textarea>
+      <div class="editor-layout-container">
+        <div class="code-column">
+          <div class="code-panel">
+            <h3>HTML</h3>
+            <textarea id="html-editor"></textarea>
+          </div>
+          <div class="code-panel">
+            <h3>CSS</h3>
+            <textarea id="css-editor"></textarea>
+          </div>
+        </div>
+        <div class="preview-column">
+            <div class="preview-panel">
+                <h3>Resultado</h3>
+                <iframe id="preview-frame"></iframe>
+            </div>
+        </div>
+      </div>
     </div>
+  </main>
+  
+  <footer>
+    <div class="imagens_footer">
+      <img src="../imagens/easycode-logo.png" alt="símbolo easy code" class="img_easycode">
+      <img src="../imagens/ifpb-logo.png" alt="símbolo ifpb" class="img-ifpb">
+    </div>
+    <hr>
+    <div class="descricao_footer">
+      <div class="footer-bottom">
+        <p class="footer-description">Projeto feito por alunos do IFPB para a disciplina de Linguagens de Marcação.</p>
+        <div class="social_block">
+          <a href="https://github.com/Projeto-LING-MARC/easycode" target="_blank"><img src="../imagens/github_logo.png" alt="icon github"></a>
+          <a href="#"><img src="../imagens/email_logo.png" alt="icon email"></a>
+        </div>
+      </div>
+    </div>
+  </footer>
 
-    <iframe id="preview"></iframe>
-  </div>
-
-  <!-- CodeMirror JS -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/xml/xml.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/css/css.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/javascript/javascript.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/javascript/javascript.min.js"></script> <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/css/css.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/htmlmixed/htmlmixed.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/addon/hint/show-hint.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/addon/hint/html-hint.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/addon/hint/css-hint.js"></script>
+  <script src="editor.js"></script>
 
-  <script>
-    // Criando os editores
-    const htmlEditor = CodeMirror.fromTextArea(document.getElementById("html"), {
-      mode: "htmlmixed",
-      theme: "dracula",
-      lineNumbers: true,
-      tabSize: 2,
-    });
-
-    const cssEditor = CodeMirror.fromTextArea(document.getElementById("css"), {
-      mode: "css",
-      theme: "dracula",
-      lineNumbers: true,
-      tabSize: 2,
-    });
-
-    const preview = document.getElementById("preview");
-
-    function atualizarPreview() {
-      const htmlCode = htmlEditor.getValue();
-      const cssCode = `<style>${cssEditor.getValue()}</style>`;
-      preview.srcdoc = htmlCode + cssCode;
-    }
-
-    // Atualiza preview sempre que digitar
-    htmlEditor.on("change", atualizarPreview);
-    cssEditor.on("change", atualizarPreview);
-  </script>
 </body>
 </html>
