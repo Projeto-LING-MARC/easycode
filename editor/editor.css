@@ -1,10 +1,9 @@
 /* Estilos Específicos para a Página do Editor */
 
 body {
-    background-color: #0f0f0f; /* Garante o fundo da página principal */
+    background-color: #0f0f0f;
 }
 
-/* Container principal da página do editor */
 .editor-main {
     padding: 40px 20px;
     width: 100%;
@@ -15,7 +14,6 @@ body {
     margin: 0 auto;
 }
 
-/* Área do Título e Controles */
 .editor-title-area {
     text-align: center;
     margin-bottom: 40px;
@@ -33,7 +31,15 @@ body {
     margin-bottom: 20px;
 }
 
-/* Botão de Limpar */
+/* Container dos Botões de Controle */
+.editor-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
 .editor-controls .btn-secondary {
     background-color: transparent;
     border: 1px solid #555;
@@ -53,36 +59,58 @@ body {
     border-color: #777;
 }
 
-/* Layout principal do editor (código e preview) */
+/* Estilos do Botão de Ligar/Desligar Autocomplete (SIMPLIFICADO) */
+.autocomplete-toggle {
+    background-color: #555;
+    border: 1px solid #555;
+    padding: 8px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+    width: 220px; /* Largura fixa para evitar pulos de layout */
+}
+
+.autocomplete-toggle span {
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+/* Estilo Ativado */
+.autocomplete-toggle.active {
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+
+/* Layout principal do editor */
 .editor-layout-container {
     display: flex;
     gap: 20px;
     min-height: 70vh;
 }
 
-/* Coluna da Esquerda (Editores) */
-.code-column {
+.code-column, .preview-column {
     flex: 1;
     display: flex;
     flex-direction: column;
+}
+
+.code-column {
     gap: 20px;
 }
 
-/* Coluna da Direita (Preview) */
-.preview-column {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-}
-
-/* Painéis de Código e Preview */
 .code-panel, .preview-panel {
     background-color: #1a1a1a;
     border-radius: 12px;
     border: 1px solid #333;
     display: flex;
     flex-direction: column;
-    overflow: hidden; /* Garante que o CodeMirror não vaze */
+    overflow: hidden;
     flex: 1;
 }
 
@@ -94,15 +122,13 @@ body {
     border-bottom: 1px solid #333;
 }
 
-/* Estilizando o Editor CodeMirror */
 .CodeMirror {
-    flex: 1 !important; /* Força o editor a preencher o espaço */
+    flex: 1 !important;
     height: auto !important;
     border-bottom-left-radius: 12px;
     border-bottom-right-radius: 12px;
 }
 
-/* Iframe do Preview */
 #preview-frame {
     width: 100%;
     height: 100%;
@@ -110,7 +136,6 @@ body {
     background-color: #ffffff;
 }
 
-/* Responsividade para Tablet e Celular */
 @media (max-width: 900px) {
     .editor-layout-container {
         flex-direction: column;
@@ -119,7 +144,7 @@ body {
     }
 
     .code-column, .preview-column {
-        min-height: 400px; /* Define uma altura mínima para os painéis */
+        min-height: 400px;
     }
 
     .editor-title-area h1 {

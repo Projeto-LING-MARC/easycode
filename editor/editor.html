@@ -43,11 +43,14 @@
     <div class="editor-page-container">
       <div class="editor-title-area">
         <h1>Editor de Código Interativo</h1>
-        <p>Escreva seu HTML e CSS e veja o resultado ao vivo! Pressione <strong>Ctrl + Espaço</strong> para ativar as sugestões.</p>
+        <p>Escreva seu HTML e CSS e veja o resultado ao vivo!</p>
         <div class="editor-controls">
             <button id="clear-code-btn" class="btn-secondary">
                 <i class="fas fa-trash"></i> Limpar Tudo
             </button>
+            <div id="autocomplete-toggle" class="autocomplete-toggle active">
+                <span>Autocompletar Ativado</span>
+            </div>
         </div>
       </div>
 
@@ -91,7 +94,8 @@
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/xml/xml.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/javascript/javascript.min.js"></script> <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/css/css.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/javascript/javascript.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/css/css.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/htmlmixed/htmlmixed.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/addon/hint/show-hint.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/addon/hint/html-hint.js"></script>
