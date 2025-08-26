@@ -1,0 +1,189 @@
+/* ---- RESET BÁSICO E CONFIGURAÇÕES GLOBAIS ---- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg-color: #12121c;
+    --surface-color: #1a1a2e;
+    --primary-color: #007BFF;
+    --text-color: #c0c0d0;
+    --text-color-light: #ffffff;
+    --border-color: #2a2a4a;
+    --header-height: 70px;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    line-height: 1.6;
+}
+
+/* ---- HEADER ---- */
+.site-header {
+    background-color: var(--surface-color);
+    padding: 0 40px;
+    height: var(--header-height);
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid var(--border-color);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: var(--text-color-light);
+    text-decoration: none;
+}
+
+.logo span {
+    color: var(--primary-color);
+}
+
+/* ---- LAYOUT PRINCIPAL DE 2 COLUNAS ---- */
+.learn-layout {
+    display: flex;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* ---- BARRA LATERAL (SIDEBAR) ---- */
+.sidebar {
+    flex: 0 0 280px; /* Não cresce, não encolhe, base de 280px */
+    padding-right: 20px;
+}
+
+.main-nav {
+    position: sticky;
+    top: calc(var(--header-height) + 20px);
+    height: calc(100vh - var(--header-height) - 40px);
+    overflow-y: auto;
+}
+
+.topic-list {
+    list-style: none;
+    margin-bottom: 25px;
+}
+
+.category-title {
+    color: var(--text-color-light);
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.main-nav a {
+    color: var(--text-color);
+    text-decoration: none;
+    display: block;
+    padding: 8px 15px;
+    border-radius: 6px;
+    transition: background-color 0.2s, color 0.2s;
+    font-size: 0.95rem;
+}
+
+.main-nav a:hover {
+    background-color: var(--surface-color);
+    color: var(--text-color-light);
+}
+
+/* ---- ÁREA DE CONTEÚDO PRINCIPAL ---- */
+.main-content {
+    flex: 1; /* Ocupa o espaço restante */
+    min-width: 0; /* Previne problemas de layout no Flexbox */
+    border-left: 1px solid var(--border-color);
+    padding-left: 40px;
+}
+
+.main-content section {
+    padding-top: 40px; /* Espaço para a âncora não colar no header */
+    margin-top: -20px;
+    margin-bottom: 40px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--border-color);
+}
+.main-content section:last-child {
+    border-bottom: none;
+}
+
+.main-content h1 {
+    font-size: 2.5rem;
+    color: var(--text-color-light);
+    margin-bottom: 1rem;
+}
+
+.main-content h2 {
+    font-size: 1.8rem;
+    color: var(--text-color-light);
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.main-content p, .main-content li {
+    font-size: 1.1rem;
+    max-width: 75ch; /* Limita o comprimento da linha para melhor leitura */
+}
+
+.main-content ul, .main-content ol {
+    margin-left: 20px;
+    margin-bottom: 1rem;
+}
+
+.main-content strong {
+    color: var(--text-color-light);
+    font-weight: 600;
+}
+
+/* ESTILO PARA BLOCOS DE CÓDIGO */
+.main-content pre {
+    background-color: #0d1117;
+    padding: 1.2em;
+    border-radius: 8px;
+    overflow-x: auto;
+    border: 1px solid var(--border-color);
+    margin: 20px 0;
+    max-width: 75ch;
+}
+
+.main-content code {
+    /* Estilo para código dentro de parágrafos */
+    background-color: var(--surface-color);
+    color: #89ddff;
+    padding: 0.2em 0.4em;
+    border-radius: 4px;
+    font-size: 0.9em;
+    font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace;
+}
+
+.main-content pre code {
+    /* Reseta o estilo para código dentro de blocos <pre> */
+    background-color: transparent;
+    padding: 0;
+    color: inherit;
+    font-size: 0.95em;
+    line-height: 1.5;
+}
+
+/* ---- RESPONSIVIDADE ---- */
+@media (max-width: 992px) {
+    .sidebar {
+        display: none; /* Em telas menores, esconde a barra lateral */
+    }
+    .main-content {
+        border-left: none;
+        padding-left: 0;
+    }
+}
