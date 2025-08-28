@@ -3,104 +3,74 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Editor | Easy Code</title>
-  
-  <link rel="stylesheet" href="../style.css">
-  <link rel="stylesheet" href="editor.css">
+  <title>Easy Code - Editor</title>
 
+  <!-- CodeMirror CSS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/theme/dracula.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/addon/hint/show-hint.min.css">
-  
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+  <!-- Font Awesome para ícones -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- CSS customizado -->
+  <link rel="stylesheet" href="editor.css">
 </head>
 <body>
-  
   <header>
-    <div class="topbar_header" id="topbar_header">
-      <a href="../index.html" style="text-decoration: none; color: inherit;">
-        <div class="logo_header" id="logo_header">Easy <span>Code</span></div>
-      </a>
-      <nav class="menu_header" id="menu_header">
-        <div class="nav-lista_header" id="nav-lista_header">
-          <a href="../index.html#section2"><button>Sobre o Projeto</button></a>
-          <a href="../index.html#section3"><button>Alunos Criadores</button></a>
-          <a href="../index.html#section4"><button>Conteúdo do Curso</button></a>
-        </div>
-        <div class="divider_header" id="divider_header"></div>
-        <div class="nav-lista1_header" id="nav-lista1_header">
-          <a href="editor.html"><button>Editor</button></a>
-          <button>Tire Dúvidas com IA</button>
-        </div>
-        <div class="nav-destaque_header" id="nav-destaque_header">
-          <button class="btn-destaque_header" id="btn-destaque_header">COMECE A APRENDER!</button>
-        </div>
-      </nav>
+    <div class="header-left">
+      <h1>Easy Code</h1>
+      <p>Escreva seu HTML e CSS e veja o resultado ao vivo!</p>
+    </div>
+    <div class="header-right">
+      <a href="../index.html" class="btn-back">⬅ Voltar</a>
+      <button id="clear-code-btn" class="btn-clear">Limpar Tudo</button>
     </div>
   </header>
 
-  <main class="editor-main">
-    <div class="editor-page-container">
-      <div class="editor-title-area">
-        <h1>Editor de Código Interativo</h1>
-        <p>Escreva seu HTML e CSS e veja o resultado ao vivo!</p>
-        <div class="editor-controls">
-            <button id="clear-code-btn" class="btn-secondary">
-                <i class="fas fa-trash"></i> Limpar Tudo
-            </button>
-            <div id="autocomplete-toggle" class="autocomplete-toggle active">
-                <span>Autocompletar Ativado</span>
-            </div>
-        </div>
+  <main>
+    <section class="editor-section">
+      <div class="editor-box">
+        <h2>HTML</h2>
+        <textarea id="html-editor" placeholder="Digite seu código HTML aqui..."></textarea>
       </div>
 
-      <div class="editor-layout-container">
-        <div class="code-column">
-          <div class="code-panel">
-            <h3>HTML</h3>
-            <textarea id="html-editor"></textarea>
-          </div>
-          <div class="code-panel">
-            <h3>CSS</h3>
-            <textarea id="css-editor"></textarea>
-          </div>
-        </div>
-        <div class="preview-column">
-            <div class="preview-panel">
-                <h3>Resultado</h3>
-                <iframe id="preview-frame"></iframe>
-            </div>
-        </div>
+      <div class="editor-box">
+        <h2>CSS</h2>
+        <textarea id="css-editor" placeholder="Digite seu código CSS aqui..."></textarea>
       </div>
-    </div>
+    </section>
+
+    <section class="preview-section">
+      <h2>Pré-visualização</h2>
+      <iframe id="preview-frame"></iframe>
+    </section>
   </main>
-  
+
   <footer>
-    <div class="imagens_footer">
-      <img src="../imagens/easycode-logo.png" alt="símbolo easy code" class="img_easycode">
-      <img src="../imagens/ifpb-logo.png" alt="símbolo ifpb" class="img-ifpb">
+    <div class="footer-top">
+      <img src="../imagens/easycode-logo.png" alt="Logo Easy Code" class="img-footer">
+      <img src="../imagens/ifpb-logo.png" alt="Logo IFPB" class="img-footer">
     </div>
     <hr>
-    <div class="descricao_footer">
-      <div class="footer-bottom">
-        <p class="footer-description">Projeto feito por alunos do IFPB para a disciplina de Linguagens de Marcação.</p>
-        <div class="social_block">
-          <a href="https://github.com/Projeto-LING-MARC/easycode" target="_blank"><img src="../imagens/github_logo.png" alt="icon github"></a>
-          <a href="#"><img src="../imagens/email_logo.png" alt="icon email"></a>
-        </div>
+    <div class="footer-bottom">
+      <p>Projeto feito por alunos do IFPB para a disciplina de Linguagens de Marcação.</p>
+      <div class="social-block">
+        <a href="https://github.com/Projeto-LING-MARC/easycode" target="_blank">
+          <i class="fab fa-github fa-lg"></i>
+        </a>
+        <a href="mailto:contato@example.com">
+          <i class="fas fa-envelope fa-lg"></i>
+        </a>
       </div>
     </div>
   </footer>
 
+  <!-- CodeMirror JS -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/xml/xml.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/javascript/javascript.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/css/css.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/htmlmixed/htmlmixed.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/addon/hint/show-hint.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/addon/hint/html-hint.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/addon/hint/css-hint.js"></script>
-  <script src="editor.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/css/css.min.js"></script>
 
+  <!-- JS customizado -->
+  <script src="editor.js"></script>
 </body>
 </html>
