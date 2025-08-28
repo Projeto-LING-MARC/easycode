@@ -1,77 +1,153 @@
-/* Reset básico */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Segoe UI', sans-serif;
-}
+/* Estilos Específicos para a Página do Editor */
 
-/* Corpo da página */
 body {
-    background-color: #050030; /* fundo escuro */
-    color: #e0e0e0;           /* texto claro */
-    font-family: 'Segoe UI', sans-serif;
-    padding: 20px;
+    background-color: #0f0f0f;
 }
 
-/* Header */
-header {
+.editor-main {
+    padding: 40px 20px;
+    width: 100%;
+}
+
+.editor-page-container {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.editor-title-area {
     text-align: center;
+    margin-bottom: 40px;
+}
+
+.editor-title-area h1 {
+    font-size: 2.5rem;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.editor-title-area p {
+    font-size: 1.1rem;
+    color: #ccc;
     margin-bottom: 20px;
 }
 
-header h1 {
-    color: #ffffff;
+/* Container dos Botões de Controle */
+.editor-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
 }
 
-/* Container principal */
-.main-container {
+.editor-controls .btn-secondary {
+    background-color: transparent;
+    border: 1px solid #555;
+    color: #ccc;
+    padding: 8px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.editor-controls .btn-secondary:hover,
+.editor-controls .btn-secondary:active {
+    background-color: #333;
+    border-color: #777;
+}
+
+/* Estilos do Botão de Ligar/Desligar Autocomplete (SIMPLIFICADO) */
+.autocomplete-toggle {
+    background-color: #555;
+    border: 1px solid #555;
+    padding: 8px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+    width: 220px; /* Largura fixa para evitar pulos de layout */
+}
+
+.autocomplete-toggle span {
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+/* Estilo Ativado */
+.autocomplete-toggle.active {
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+
+/* Layout principal do editor */
+.editor-layout-container {
     display: flex;
     gap: 20px;
-    height: 80vh;
+    min-height: 70vh;
 }
 
-/* Editor (HTML e CSS) */
-.editor-area {
+.code-column, .preview-column {
     flex: 1;
     display: flex;
     flex-direction: column;
-    gap: 10px;
 }
 
-/* Títulos das áreas */
-.editor-area label {
-    font-weight: bold;
-    margin-bottom: 5px;
+.code-column {
+    gap: 20px;
 }
 
-/* Textareas */
-textarea {
-    flex: 1;
-    padding: 10px;
-    border-radius: 8px;
+.code-panel, .preview-panel {
+    background-color: #1a1a1a;
+    border-radius: 12px;
     border: 1px solid #333;
-    font-family: monospace;
-    font-size: 14px;
-    background-color: #00255e;
-    color: #f5f5f5;
-    resize: none;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    flex: 1;
 }
 
-/* Preview */
-iframe {
-    flex: 1;
-    border-radius: 8px;
-    border: 1px solid #333;
+.code-panel h3, .preview-panel h3 {
+    padding: 12px 15px;
+    background-color: #111;
+    color: #00aaff;
+    font-weight: 600;
+    border-bottom: 1px solid #333;
+}
+
+.CodeMirror {
+    flex: 1 !important;
+    height: auto !important;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+}
+
+#preview-frame {
+    width: 100%;
+    height: 100%;
+    border: none;
     background-color: #ffffff;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.5);
 }
 
-/* Responsividade */
-@media(max-width: 900px) {
-    .main-container {
+@media (max-width: 900px) {
+    .editor-layout-container {
         flex-direction: column;
+        min-height: auto;
         height: auto;
+    }
+
+    .code-column, .preview-column {
+        min-height: 400px;
+    }
+
+    .editor-title-area h1 {
+        font-size: 2rem;
     }
 }

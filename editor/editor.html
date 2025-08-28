@@ -23,6 +23,72 @@
       <label for="css">CSS</label>
       <textarea id="css"></textarea>
     </div>
+  </header>
+
+  <main class="editor-main">
+    <div class="editor-page-container">
+      <div class="editor-title-area">
+        <h1>Editor de Código Interativo</h1>
+        <p>Escreva seu HTML e CSS e veja o resultado ao vivo!</p>
+        <div class="editor-controls">
+            <button id="clear-code-btn" class="btn-secondary">
+                <i class="fas fa-trash"></i> Limpar Tudo
+            </button>
+            <div id="autocomplete-toggle" class="autocomplete-toggle active">
+                <span>Autocompletar Ativado</span>
+            </div>
+        </div>
+      </div>
+
+      <div class="editor-layout-container">
+        <div class="code-column">
+          <div class="code-panel">
+            <h3>HTML</h3>
+            <textarea id="html-editor"></textarea>
+          </div>
+          <div class="code-panel">
+            <h3>CSS</h3>
+            <textarea id="css-editor"></textarea>
+          </div>
+        </div>
+        <div class="preview-column">
+            <div class="preview-panel">
+                <h3>Resultado</h3>
+                <iframe id="preview-frame"></iframe>
+            </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  
+  <footer>
+    <div class="imagens_footer">
+      <img src="../imagens/easycode-logo.png" alt="símbolo easy code" class="img_easycode">
+      <img src="../imagens/ifpb-logo.png" alt="símbolo ifpb" class="img-ifpb">
+    </div>
+    <hr>
+    <div class="descricao_footer">
+      <div class="footer-bottom">
+        <p class="footer-description">Projeto feito por alunos do IFPB para a disciplina de Linguagens de Marcação.</p>
+        <div class="social_block">
+          <a href="https://github.com/Projeto-LING-MARC/easycode" target="_blank"><img src="../imagens/github_logo.png" alt="icon github"></a>
+          <a href="#"><img src="../imagens/email_logo.png" alt="icon email"></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/xml/xml.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/javascript/javascript.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/css/css.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/htmlmixed/htmlmixed.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/addon/hint/show-hint.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/addon/hint/html-hint.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/addon/hint/css-hint.js"></script>
+  <script src="editor.js"></script>
+  <script src="//code.tidio.co/a6wyiw8whugheunmdr0uueiszq5uuhvs.js" async></script>
+  
 
     <iframe id="preview"></iframe>
   </div>
