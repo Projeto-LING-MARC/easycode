@@ -444,10 +444,17 @@ footer {
 
 .imagens_footer {
     display: flex;
-    justify-content: center;
+    justify-content: left;
     align-items: center;
     gap: 20px;
     margin-bottom: 20px;
+}
+
+@media screen and (max-width: 480px) {
+    .imagens_footer {
+        justify-content: center;
+    }
+  
 }
 
 .imagens_footer .img_easycode {
@@ -460,11 +467,7 @@ footer {
     width: auto;
 }
 
-.descricao_footer {
-  width: 100%;
-  max-width: 940px;
-  margin: 0 auto;
-}
+/* descrição no rodapé */
 
 .footer-bottom {
   display: flex;
@@ -498,14 +501,17 @@ footer {
   margin-left: 12px;
 }
 
-
-.social_block > a:first-child {
-  margin-left: 0;
+.social_block > a > img {
+  margin-top: 5px;
+  width: 32px;
+  height: 32px;
 }
 
-.social_block > a > img {
-  width: 24px;
-  height: 24px;
+.social_block > a > img:hover{
+  filter: brightness(0.8);
+  transition: 0.3s;
+  width: 36px;
+  height: 36px;
 }
 
 /* ################################### */
