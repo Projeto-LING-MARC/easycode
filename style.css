@@ -171,6 +171,12 @@ main {
   text-align: center;
 }
 
+
+/* geral - o que será aplicado a todos os elementos na página */
+
+/* main - o que será aplicado a todos os elementos na main */
+
+
 /* SECTION 2 - SOBRE O PROJETO */
 .section2 {
     width: 100%;
@@ -411,7 +417,7 @@ main {
 
 .conteudo_html {
   padding-left: 40px;
-  background-image: url("https://uploads-ssl.webflow.com/62434fa732124a0fb112aab4/62434fa732124ac2f812aadc_plus%20rotated.svg");
+  background-image: url(imagens/html.png);
   background-position: 0% 50%;
   background-size: auto;
   background-repeat: no-repeat;
@@ -419,7 +425,7 @@ main {
 
 .conteudo_css {
   padding-left: 40px;
-  background-image: url("https://uploads-ssl.webflow.com/62434fa732124a0fb112aab4/62434fa732124a700a12aad4_check%20circle.svg");
+  background-image: url("imagens/css.png");
   background-position: 0% 50%;
   background-size: auto;
   background-repeat: no-repeat;
@@ -472,6 +478,18 @@ footer {
   color: rgb(58, 69, 84);
 }
 
+
+.imagens_footer > .img-easycode {
+  width: 108px;
+  height: auto;
+}
+
+.imagens_footer > .img-ifpb {
+  width: 72px;
+  height: auto;
+}
+
+
 .social_block {
   display: flex;
 }
@@ -479,6 +497,7 @@ footer {
 .social_block > a {
   margin-left: 12px;
 }
+
 
 .social_block > a:first-child {
   margin-left: 0;
