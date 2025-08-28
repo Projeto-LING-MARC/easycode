@@ -16,14 +16,24 @@
   <link rel="stylesheet" href="editor.css">
 </head>
 <body>
+  <!-- Cabeçalho padronizado do index -->
   <header>
-    <div class="header-left">
-      <h1>Easy Code</h1>
-      <p>Escreva seu HTML e CSS e veja o resultado ao vivo!</p>
-    </div>
-    <div class="header-right">
-      <a href="../index.html" class="btn-back">⬅ Voltar</a>
-      <button id="clear-code-btn" class="btn-clear">Limpar Tudo</button>
+    <div class="topbar_header" id="topbar_header">
+      <div class="logo_header" id="logo_header">Easy <span>Code</span></div>
+      <nav class="menu_header" id="menu_header">
+        <div class="nav-lista_header" id="nav-lista_header">
+          <a href="../index.html#section2"><button>Sobre o Projeto</button></a>
+          <a href="../index.html#section3"><button>Alunos Criadores</button></a>
+          <a href="../index.html#section4"><button>Conteúdo do Curso</button></a>
+        </div>
+        <div class="divider_header" id="divider_header"></div>
+        <div class="nav-lista1_header" id="nav-lista1_header">
+          <button id="Button_Editor">Editor de Código</button>
+        </div>
+        <div class="nav-destaque_header" id="nav-destaque_header">
+          <a href="../comeceaaprender/index.html"><button class="btn-destaque_header" id="btn-destaque_header">COMECE A APRENDER!</button></a>
+        </div>
+      </nav>
     </div>
   </header>
 
@@ -70,9 +80,15 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/htmlmixed/htmlmixed.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/css/css.min.js"></script>
 
-  <!-- Editor IA -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/addon/hint/show-hint.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/addon/hint/html-hint.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/addon/hint/css-hint.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/addon/hint/show-hint.min.css">
+
+  <!-- Editor IA (Chatbot) -->
   <script src="//code.tidio.co/a6wyiw8whugheunmdr0uueiszq5uuhvs.js" async></script>
-  <!-- JS customizado -->
+
+  <!-- JS customizado do editor -->
   <script src="editor.js"></script>
 </body>
 </html>

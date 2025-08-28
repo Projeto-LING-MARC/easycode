@@ -5,6 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const cssEditorArea = document.getElementById("css-editor");
   const previewFrame = document.getElementById("preview-frame");
   const clearCodeBtn = document.getElementById("clear-code-btn");
+  const autocompleteBtn = document.getElementById("autocomplete-btn"); // novo botão
 
   // --- CONFIGURAÇÃO BASE DO CODEMIRROR ---
   const editorConfig = {
@@ -33,11 +34,16 @@ document.addEventListener("DOMContentLoaded", () => {
   htmlEditor.on("change", updatePreview);
   cssEditor.on("change", updatePreview);
 
-  // --- BOTÃO LIMPAR ---
-  clearCodeBtn.addEventListener("click", () => {
-    htmlEditor.setValue("");
-    cssEditor.setValue("");
+  // Para HTML
+  htmlEditor.on("inputRead", function(cm) {
+    CodeMirror.showHint(cm, CodeMirror.hint.html, {completeSingle: false});
   });
+
+// Para CSS
+  cssEditor.on("inputRead", function(cm) {
+    CodeMirror.showHint(cm, CodeMirror.hint.css, {completeSingle: false});
+  });
+
 
   // --- CHAMADA INICIAL DO PREVIEW ---
   updatePreview();
