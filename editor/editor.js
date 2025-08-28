@@ -1,75 +1,44 @@
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", () => {
 
-    // --- VARIÁVEIS DE CONTROLE ---
-    const autocompleteToggleBtn = document.getElementById("autocomplete-toggle");
-    let isAutocompleteActive = true; // Começa ativado por padrão
+  // --- ELEMENTOS DOM ---
+  const htmlEditorArea = document.getElementById("html-editor");
+  const cssEditorArea = document.getElementById("css-editor");
+  const previewFrame = document.getElementById("preview-frame");
+  const clearCodeBtn = document.getElementById("clear-code-btn");
 
-    // --- CONFIGURAÇÃO DO EDITOR ---
-    const editorConfig = {
-        theme: "dracula",
-        lineNumbers: true,
-        tabSize: 2,
-        extraKeys: {
-            "Ctrl-Space": "autocomplete"
-        }
-    };
+  // --- CONFIGURAÇÃO BASE DO CODEMIRROR ---
+  const editorConfig = {
+    theme: "dracula", // Tema dark
+    lineNumbers: true,
+    tabSize: 2
+  };
 
-    const htmlEditor = CodeMirror.fromTextArea(document.getElementById("html-editor"), {
-        ...editorConfig,
-        mode: "htmlmixed",
-    });
+  const htmlEditor = CodeMirror.fromTextArea(htmlEditorArea, {
+    ...editorConfig,
+    mode: "htmlmixed"
+  });
 
-    const cssEditor = CodeMirror.fromTextArea(document.getElementById("css-editor"), {
-        ...editorConfig,
-        mode: "css",
-    });
+  const cssEditor = CodeMirror.fromTextArea(cssEditorArea, {
+    ...editorConfig,
+    mode: "css"
+  });
 
-    // --- LÓGICA DO AUTOCOMPLETE ---
-    htmlEditor.on('inputRead', function(editor, change) {
-        if (isAutocompleteActive && change.text[0] === '<') {
-            setTimeout(() => { 
-                editor.showHint({ hint: CodeMirror.hint.html, completeSingle: false }); 
-            }, 50);
-        }
-    });
+  // --- FUNÇÃO DE ATUALIZAÇÃO DO PREVIEW ---
+  function updatePreview() {
+    const html = htmlEditor.getValue();
+    const css = `<style>${cssEditor.getValue()}</style>`;
+    previewFrame.srcdoc = css + html;
+  }
 
-    cssEditor.on('inputRead', function(editor, change) {
-        if (isAutocompleteActive && /^[a-zA-Z]$/.test(change.text[0])) {
-             setTimeout(() => { editor.showHint({ completeSingle: false }); }, 50);
-        }
-    });
+  htmlEditor.on("change", updatePreview);
+  cssEditor.on("change", updatePreview);
 
-    // --- LÓGICA DOS BOTÕES DE CONTROLE ---
-    const previewFrame = document.getElementById("preview-frame");
-    const clearCodeBtn = document.getElementById("clear-code-btn");
-    
-    // Botão de Ligar/Desligar
-    autocompleteToggleBtn.addEventListener("click", () => {
-        isAutocompleteActive = !isAutocompleteActive; // Inverte o estado
-        autocompleteToggleBtn.classList.toggle("active", isAutocompleteActive);
-        const textSpan = autocompleteToggleBtn.querySelector("span");
-        if (isAutocompleteActive) {
-            textSpan.textContent = "Autocompletar Ativado";
-        } else {
-            textSpan.textContent = "Autocompletar Desativado";
-        }
-    });
+  // --- BOTÃO LIMPAR ---
+  clearCodeBtn.addEventListener("click", () => {
+    htmlEditor.setValue("");
+    cssEditor.setValue("");
+  });
 
-    // Botão de Limpar
-    clearCodeBtn.addEventListener("click", () => {
-        htmlEditor.setValue("");
-        cssEditor.setValue("");
-    });
-
-    // --- FUNÇÃO DE ATUALIZAÇÃO DO PREVIEW ---
-    function updatePreview() {
-        const htmlCode = htmlEditor.getValue();
-        const cssCode = `<style>${cssEditor.getValue()}</style>`;
-        previewFrame.srcdoc = `${cssCode}${htmlCode}`;
-    }
-
-    htmlEditor.on("change", updatePreview);
-    cssEditor.on("change", updatePreview);
-
-    updatePreview(); // Chamada inicial
+  // --- CHAMADA INICIAL DO PREVIEW ---
+  updatePreview();
 });
