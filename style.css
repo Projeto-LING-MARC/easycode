@@ -415,6 +415,15 @@ main {
   background-color: rgb(17, 124, 217);
 }
 
+@media screen and (max-width: 600px) {
+  .heading_tabela_conteudos,
+  .linha_tabela_conteudos {
+    grid-template-columns: 1fr;
+    text-align: left;
+    padding-left: 20px;
+  }
+}
+
 .conteudo_html {
   padding-left: 40px;
   background-image: url(imagens/html.png);
