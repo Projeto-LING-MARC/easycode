@@ -16,6 +16,7 @@ body {
   background-color: #0f0f0f;
   color: #fff;
   font-family: 'Poppins', Arial, sans-serif;
+  overflow-x: hidden;
 }
 
 /* Cabeçalho */
@@ -29,6 +30,8 @@ header {
   align-items: center;
   background-color: #111;
   padding: 15px 30px;
+  flex-wrap: wrap; 
+  gap: 20px;
 }
 
 .logo_header {
@@ -46,30 +49,10 @@ header {
   display: flex;
   align-items: center;
   gap: 15px;
+  flex-wrap: wrap;
 }
 
-.nav-lista_header button {
-  margin-right: 10px;
-  background-color: transparent;
-  border: 1px solid #555;
-  color: #ccc;
-  padding: 6px 10px;
-  cursor: pointer;
-  border-radius: 4px;
-  transition: 0.3s;
-}
-
-.nav-lista_header button:hover {
-  background-color: #333;
-}
-
-.divider_header {
-  width: 2px;
-  height: 30px;
-  background-color: #444;
-  margin: 0 15px;
-}
-
+.nav-lista_header button,
 .nav-lista1_header button {
   margin-right: 10px;
   background-color: transparent;
@@ -81,8 +64,18 @@ header {
   transition: 0.3s;
 }
 
-.nav-lista1_header button:hover {
+.nav-lista_header button:hover,
+.nav-lista_header button:active,
+.nav-lista1_header button:hover,
+.nav-lista1_header button:active {
   background-color: #333;
+}
+
+.divider_header {
+  width: 2px;
+  height: 30px;
+  background-color: #444;
+  margin: 0 15px;
 }
 
 .nav-destaque_header .btn-destaque_header {
@@ -95,14 +88,14 @@ header {
   cursor: pointer;
 }
 
-.nav-destaque_header .btn-destaque_header:hover {
+.nav-destaque_header .btn-destaque_header:hover,
+.nav-destaque_header .btn-destaque_header:active {
   background-color: #0052cc;
 }
 
 /* Conteúdo Principal */
 main {
   padding: 40px 20px;
-  justify-content: center;
   display: flex;
   flex-direction: column;
   align-items: center;  
@@ -110,10 +103,16 @@ main {
 
 .conteudo {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  align-items: center;
   max-width: 1000px;
   width: 100%;
   gap: 40px;
+}
+
+.texto {
+  flex: 1;
+  min-width: 300px;
 }
 
 .texto h2 {
@@ -143,7 +142,8 @@ main {
   text-decoration: none;
 }
 
-.texto .btn-destaque:hover {
+.texto .btn-destaque:hover,
+.texto .btn-destaque:active {
   background-color: #0052cc;
 }
 
@@ -152,7 +152,9 @@ main {
   background-color: #1a1a1a;
   border-radius: 12px;
   overflow: hidden;
-  width: 400px;
+  width: 100%;
+  max-width: 400px;
+  flex-shrink: 0;
 }
 
 .editor {
@@ -169,16 +171,17 @@ main {
   text-align: center;
 }
 
+
 /* geral - o que será aplicado a todos os elementos na página */
 
 /* main - o que será aplicado a todos os elementos na main */
 
-/* SECTION 2 - SOBRE O PROJETO */
 
-/* Espaçamento entre as sections */
+/* SECTION 2 - SOBRE O PROJETO */
 .section2 {
     width: 100%;
     margin-top: 100px;
+    padding: 0 15px;
 }
 
 .infoProjeto_section2 {
@@ -205,10 +208,10 @@ main {
 }
 
 .gridInfo_section2 {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
+    display: flex;
+    flex-wrap: wrap;
     justify-content: center;
+    gap: 30px;
 }
 
 .card {
@@ -217,9 +220,12 @@ main {
     border-radius: 10px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    flex: 1 1 300px;
+    max-width: 450px;
 }
 
-.card:hover {
+.card:hover,
+.card:active {
     transform: translateY(-8px);
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
 }
@@ -245,11 +251,12 @@ main {
     color: #e0e0e0;
 }
 
-/* section3 - o que será aplicado a todos elementos na section1*/
+/* section3 */
 .criadores_section3 {
     text-align: center;
     max-width: 1200px;
     margin: 40px auto; 
+    padding: 0 15px;
 }
 
 .tituloprincipal_section3 {
@@ -272,7 +279,6 @@ main {
   margin: 0 auto;
 }
 
-/* Estilo dos Cartões de Perfil */
 .LucasPereira_section,
 .luizHenrique_section,
 .JoaoVictor_section,
@@ -289,18 +295,21 @@ main {
     transition: transform 0.3s ease; 
 }
 
-/* Efeito de levantar o cartão ao passar o mouse */
 .LucasPereira_section:hover,
+.LucasPereira_section:active,
 .luizHenrique_section:hover,
+.luizHenrique_section:active,
 .JoaoVictor_section:hover,
+.JoaoVictor_section:active,
 .Kaik_section:hover,
-.Ruan_section:hover {
+.Kaik_section:active,
+.Ruan_section:hover,
+.Ruan_section:active {
     transform: translateY(-10px);
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
 }
 
 
-/* Imagem de perfil dentro do cartão */
 .imagemperfilcriadores_section3 {
     width: 180px;
     height: 180px;
@@ -313,14 +322,13 @@ main {
     transition: filter 0.3s ease;
 }
 
-/* Nome do aluno dentro do cartão */
 .nome_criadores_section3 {
     font-size: 1.2rem;
     font-weight: 700;
     color: #0052cc; 
     margin: 0;
 }
-/*Estilo para os Links Sociais */
+
 .redessociais_section3 {
   margin-top: 15px;
   display: flex;
@@ -335,40 +343,24 @@ main {
   transition: color 0.3s ease, transform 0.3s ease;
 }
 
-/* Estiliza o texto "Acesse o LinkedIn" */
-.redessociais_section3 a span {
-  font-size: 0.9rem; 
-  font-weight: normal;
-  color: #cccccc;
-  transition: color 0.3s ease;
-}
-
-/* Efeito ao passar o mouse */
 .redessociais_section3 a:hover .fa-linkedin,
-.redessociais_section3 a:hover span {
-  color: #0e76a8; /
-}
-
-.redessociais_section3 a:hover .fa-linkedin {
+.redessociais_section3 a:active .fa-linkedin {
+  color: #0e76a8;
   transform: scale(1.2); 
 }
 
-/* section4 - o que será aplicado a todos elementos na section4*/
+.redessociais_section3 a:hover span,
+.redessociais_section3 a:active span {
+  color: #0e76a8;
+}
 
+/* section4 */
 #section4 {
-  width: 100vw;
+  width: 100%;
   position: relative;
   padding: 40px 30px 80px;
-  border-bottom: 1px solid rgb(228, 235, 243);
   background-color: rgb(17, 140, 217);
 }
-
-@media screen and (max-width: 767px) {
-  .features-table {
-    padding: 60px 15px;
-  }
-}
-
 
 .container_section4 {
   width: 100%;
@@ -377,32 +369,12 @@ main {
   margin-left: auto;
 }
 
-@media screen and (max-width: 991px) {
-  .container_section4 {
-    max-width: 728px;
-  }
-}
-
-@media screen and (max-width: 479px) {
-  .container_section4 {
-    max-width: none;
-  }
-}
-
-
 .headline_section4 {
   font-size: 2.8rem;
   margin-bottom: 16px;
   color: rgb(13, 13, 13);
   text-align: center;
 }
-
-@media screen and (max-width: 479px) {
-  .centered-heading-3 {
-    margin-bottom: 24px;
-  }
-}
-
 
 .paragraph_section4 {
   font-size: 1rem;
@@ -414,8 +386,6 @@ main {
   text-align: center;
 }
 
-
-/* tabela de conteudos */
 .tabela_conteudos {
   display: flex;
   margin-top: 50px;
@@ -423,63 +393,29 @@ main {
   border-radius: 0px 20px 0px 0px;
 }
 
-/* cabeçalho da tabela de conteudos */
 .heading_tabela_conteudos {
   display: grid;
-  padding-top: 24px;
-  padding-bottom: 24px;
-  grid-auto-columns: 1fr;
-  gap: 0px;
+  padding: 24px;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: auto;
   border-bottom: 1px solid rgb(228, 235, 243);
   border-radius: 20px 20px 0px 0px;
   background-color: rgb(245, 247, 250);
 }
 
-@media screen and (max-width: 479px) {
-  .heading_tabela_conteudos {
-    column-gap: 20px;
-  }
-}
-
 .title_tabela_conteudos {
   margin-bottom: 0px;
-  margin-left: 24px;
   color: rgb(13, 13, 13);
 }
 
-@media screen and (max-width: 479px) {
-  .title_tabela_conteudos {
-    margin-left: 10px;
-  }
-}
-
-
-/* linhas da tabela conteudos */
 .linha_tabela_conteudos {
   display: grid;
-  padding-top: 24px;
-  padding-bottom: 24px;
-  grid-auto-columns: 1fr;
-  gap: 0px;
+  padding: 24px;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: auto;
   border-bottom: 1px solid rgb(228, 235, 243);
-  border-bottom-left-radius: 0px;
-  border-bottom-right-radius: 0px;
   background-color: rgb(17, 124, 217);
 }
 
-@media screen and (max-width: 479px) {
-  .linha_tabela_conteudos {
-    column-gap: 20px;
-  }
-}
-
-/* linhas html */
 .conteudo_html {
-  margin-left: 24px;
   padding-left: 40px;
   background-image: url(imagens/html.png);
   background-position: 0% 50%;
@@ -487,18 +423,7 @@ main {
   background-repeat: no-repeat;
 }
 
-@media screen and (max-width: 479px) {
-  .conteudo_html {
-    margin-left: 10px;
-    padding-left: 20px;
-    background-position: 0px 5px;
-    background-size: 14px;
-  }
-}
-
-/* linhas css */
 .conteudo_css {
-  margin-left: 24px;
   padding-left: 40px;
   background-image: url("imagens/css.png");
   background-position: 0% 50%;
@@ -506,55 +431,53 @@ main {
   background-repeat: no-repeat;
 }
 
-@media screen and (max-width: 479px) {
-  .conteudo_css {
-    margin-left: 10px;
-    padding-left: 20px;
-    background-position: 0px 4px;
-    background-size: 16px;
-  }
-}
-
-/* ultima linha da tabela conteudos */
 .ultima_linha_tabela_conteudos {
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
 }
 
-
-/* footer - o que será aplicado a todos elementos no rodapé*/
+/* footer */
 footer {
   position: relative;
   padding: 40px 30px;
-  border-bottom: 1px solid rgb(228, 235, 243);
 }
 
-@media screen and (max-width: 767px) {
-  footer {
-    padding-right: 15px;
-    padding-left: 15px;
-  }
+.imagens_footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 20px;
 }
 
+.imagens_footer .img_easycode {
+    width: 130px;
+    height: auto;
+}
 
-.imagens_footer, .descricao_footer {
+.imagens_footer .img-ifpb {
+    height: 65px;
+    width: auto;
+}
+
+.descricao_footer {
   width: 100%;
   max-width: 940px;
-  margin-right: auto;
-  margin-left: auto;
+  margin: 0 auto;
 }
 
-@media screen and (max-width: 991px) {
-  .imagens_footer, .descricao_footer {
-    max-width: 728px;
-  }
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
 }
 
-@media screen and (max-width: 479px) {
-  .imagens_footer, .descricao_footer {
-    max-width: none;
-  }
+.footer-description {
+  color: rgb(58, 69, 84);
 }
+
 
 .imagens_footer > .img-easycode {
   width: 108px;
@@ -567,73 +490,162 @@ footer {
 }
 
 
-.footer-bottom {
+.social_block {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
 }
 
-@media screen and (max-width: 767px) {
-  .footer-bottom {
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
+.social_block > a {
+  margin-left: 12px;
+}
+
+
+.social_block > a:first-child {
+  margin-left: 0;
+}
+
+.social_block > a > img {
+  width: 24px;
+  height: 24px;
+}
+
+/* ################################### */
+/* ######### MEDIA QUERIES ########### */
+/* ################################### */
+
+/* Tablet (1024px e abaixo) */
+@media screen and (max-width: 1024px) {
+    .topbar_header {
+        flex-direction: column;
+        align-items: center;
+        gap: 25px;
+    }
+
+    .menu_header {
+        justify-content: center;
+    }
+	
+    .divider_header {
+        display: none;
+    }
+
+    .conteudo {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .texto {
+        max-width: 600px;
+    }
+}
+
+
+/* Celular (768px e abaixo) */
+@media screen and (max-width: 768px) {
+  .logo_header {
+    text-align: center;
+    width: 100%; 
   }
-}
-
-@media screen and (max-width: 479px) {
-  .footer-bottom {
+  
+  .menu_header {
     flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
+    align-items: center;
+    width: 100%;
+    gap: 10px;
   }
-}
 
+  .nav-lista_header, .nav-lista1_header {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+  }
 
-.footer-description {
-  color: rgb(58, 69, 84);
-}
+  .nav-destaque_header {
+    width: 100%;
+    margin-top: 10px;
+  }
 
-@media screen and (max-width: 767px) {
+  .nav-lista_header button, .nav-lista1_header button {
+    width: 100%;
+    text-align: center;
+    margin: 0;
+  }
+
+  .btn-destaque_header {
+    width: 100%;
+    padding: 12px 20px;
+    font-size: 1.1rem;
+    background-color: #007bff;
+  }
+
+  .btn-destaque_header:hover,
+  .btn-destaque_header:active {
+    background-color: #0056b3;
+  }
+  
+  .card-codigo {
+    max-width: 400px;
+  }
+
+  .footer-bottom {
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+  }
+
+  .social_block {
+    justify-content: center;
+    margin: 0;
+  }
+
+  #section4 {
+    padding: 60px 15px;
+  }
+  
   .footer-description {
     font-size: 14px;
     line-height: 20px;
   }
 }
 
-/* redes sociais */
-.social_block {
-  display: flex;
-  margin-top: 0px;
-  margin-left: -12px;
-  justify-content: flex-start;
-  align-items: center;
-}
 
-@media screen and (max-width: 767px) {
-  .social_block {
-    margin-top: 20px;
+/* Mobile Pequeno (480px e abaixo) */
+@media screen and (max-width: 480px) {
+  .headline_section4, .titulo_section2 h2 {
+    font-size: 2.2rem;
   }
-}
 
-@media screen and (max-width: 479px) {
-  .social_block {
-    margin-top: 20px;
+  .heading_tabela_conteudos {
+    padding: 15px 10px;
+    font-size: 0.9rem;
   }
-}
-
-
-.social_block > a {
-  margin-left: 12px;
-}
-
-@media screen and (max-width: 767px) {
-  .social_block > a {
-    margin-left: 20px;
+  
+  .title_tabela_conteudos {
+    margin-left: 10px;
   }
-}
 
-.social_block > a > img {
-  width: 24px;
-  height: 24px;
+  .linha_tabela_conteudos {
+    padding: 15px 10px;
+    font-size: 0.8rem;
+  }
+  
+  .conteudo_html, .conteudo_css {
+    padding-left: 25px;
+    background-position: 0px 5px;
+    background-size: 14px;
+  }
+
+  .perfiscontainer_section3 {
+    gap: 20px;
+  }
+
+  .LucasPereira_section,
+  .luizHenrique_section,
+  .JoaoVictor_section,
+  .Kaik_section,
+  .Ruan_section {
+    width: 100%;
+    max-width: 300px;
+  }
 }
