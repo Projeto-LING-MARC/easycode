@@ -356,7 +356,7 @@ main {
 
 /* section4 */
 #section4 {
-  width: 100%;
+  width: 100vw;
   position: relative;
   padding: 40px 30px 80px;
   background-color: rgb(17, 140, 217);
