@@ -10,7 +10,7 @@
 <body>
 
     <div class="topbar_header">
-            <div class="logo_header">Easy <span>Code</span></div>
+            <a href="../index.html" class="logo_header">Easy <span>Code</span></a>
             <nav class="menu_header">
                 <div class="nav-lista_header">
                     <a href="../index.html#section2" class="header-btn">Sobre o Projeto</a>
@@ -19,11 +19,11 @@
                 </div>
                 <div class="divider_header"></div>
                 <div class="nav-lista1_header">
-                    <button class="header-btn">Editor</button>
+                    <a href="../editor/editor.html" class="header-btn">Editor</a>
                     <button class="header-btn">Tire Dúvidas com IA</button>
                 </div>
             </nav>
-        </div>
+            </div>
 
     <div class="learn-layout">
         <aside class="sidebar">
@@ -74,252 +74,488 @@
         </aside>
 
         <main class="main-content">
-            <section id="html-introducao">
-                <h1>Introdução ao HTML</h1>
-                <p>HTML é a sigla para <strong>HyperText Markup Language</strong> (Linguagem de Marcação de Hipertexto). Não é uma linguagem de programação, mas sim uma linguagem de marcação que define a estrutura do seu conteúdo.</p>
-                <p>O HTML consiste em uma série de <strong>elementos</strong> que você usa para "embrulhar" ou "marcar" diferentes partes do conteúdo para que ele apareça e aja de uma certa maneira. As tags podem transformar um texto em um link, colocar palavras em itálico, e assim por diante.</p>
-            </section>
-            <section id="html-editores">
-                <h1>Editores de Código</h1>
-                <p>Para escrever código HTML, você precisa de um editor de código. Embora você possa usar um editor de texto simples, é altamente recomendável usar um editor dedicado, que oferece recursos como destaque de sintaxe e autocompletar.</p>
-                <p>Algumas opções populares e gratuitas são:</p>
-                <ul>
-                    <li><strong>Visual Studio Code (VS Code):</strong> O mais popular atualmente, com milhares de extensões.</li>
-                    <li><strong>Sublime Text:</strong> Leve, rápido e poderoso.</li>
-                    <li><strong>Atom:</strong> Criado pelo GitHub, altamente customizável.</li>
-                </ul>
-            </section>
-            <section id="html-basico">
-                <h1>HTML Básico</h1>
-                <p>Todo documento HTML precisa ter uma estrutura mínima para que o navegador o entenda corretamente. Essa estrutura é o ponto de partida para qualquer página da web.</p>
-                <pre><code>&lt;!DOCTYPE html&gt;
+    <section id="html-introducao">
+        <h1>Introdução ao HTML</h1>
+        <p>HTML é a sigla para <strong>HyperText Markup Language</strong> (Linguagem de Marcação de Hipertexto). Não é uma linguagem de programação, mas sim uma linguagem de marcação que define a estrutura do seu conteúdo.</p>
+        <p>O HTML consiste em uma série de <strong>elementos</strong> que você usa para "embrulhar" ou "marcar" diferentes partes do conteúdo para que ele apareça e aja de uma certa maneira. As tags podem transformar um texto em um link, colocar palavras em itálico, e assim por diante.</p>
+    </section>
+    <section id="html-editores">
+        <h1>Editores de Código</h1>
+        <p>Para escrever código HTML, você precisa de um editor de código. Embora você possa usar um editor de texto simples, é altamente recomendável usar um editor dedicado, que oferece recursos como destaque de sintaxe e autocompletar.</p>
+        <p>Algumas opções populares e gratuitas são:</p>
+        <ul>
+            <li><strong>Visual Studio Code (VS Code):</strong> O mais popular atualmente, com milhares de extensões.</li>
+            <li><strong>Sublime Text:</strong> Leve, rápido e poderoso.</li>
+            <li><strong>Atom:</strong> Criado pelo GitHub, altamente customizável.</li>
+        </ul>
+    </section>
+    <section id="html-basico">
+        <h1>HTML Básico</h1>
+        <p>Todo documento HTML precisa ter uma estrutura mínima para que o navegador o entenda corretamente. Essa estrutura é o ponto de partida para qualquer página da web.</p>
+        <pre><code>&lt;!DOCTYPE html&gt;
 &lt;html lang="pt-BR"&gt;
-    &lt;head&gt;
-        &lt;meta charset="UTF-8"&gt;
-        &lt;title&gt;Título da Página&lt;/title&gt;
-    &lt;/head&gt;
-    &lt;body&gt;
-        &lt;h1&gt;Meu Primeiro Título&lt;/h1&gt;
-        &lt;p&gt;Meu primeiro parágrafo.&lt;/p&gt;
-    &lt;/body&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;Título da Página&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;Meu Primeiro Título&lt;/h1&gt;
+    &lt;p&gt;Meu primeiro parágrafo.&lt;/p&gt;
+&lt;/body&gt;
 &lt;/html&gt;</code></pre>
-            </section>
-            <section id="html-elementos">
-                <h1>Elementos HTML</h1>
-                <p>Um elemento HTML é geralmente composto por uma <strong>tag de abertura</strong>, o <strong>conteúdo</strong>, e uma <strong>tag de fechamento</strong>. Existem também elementos vazios (sem tag de fechamento), como o <code>&lt;img&gt;</code>.</p>
-                <pre><code>&lt;p&gt;Este é o conteúdo do elemento.&lt;/p&gt;</code></pre>
-            </section>
-            <section id="html-atributos">
-                <h1>Atributos HTML</h1>
-                <p>Atributos fornecem informações adicionais sobre um elemento e são sempre especificados na tag de abertura. Eles geralmente vêm em pares de nome/valor como: <code>nome="valor"</code>.</p>
-                <pre><code>&lt;a href="https://www.google.com"&gt;Link para o Google&lt;/a&gt;
+    </section>
+    <section id="html-elementos">
+        <h1>Elementos HTML</h1>
+        <p>Um elemento HTML é geralmente composto por uma <strong>tag de abertura</strong>, o <strong>conteúdo</strong>, e uma <strong>tag de fechamento</strong>. Existem também elementos vazios (sem tag de fechamento), como o <code>&lt;img&gt;</code>.</p>
+        <pre><code>&lt;p&gt;Este é o conteúdo do elemento.&lt;/p&gt;</code></pre>
+    </section>
+    <section id="html-atributos">
+        <h1>Atributos HTML</h1>
+        <p>Atributos fornecem informações adicionais sobre um elemento e são sempre especificados na tag de abertura. Eles geralmente vêm em pares de nome/valor como: <code>nome="valor"</code>.</p>
+        <pre><code>&lt;a href="https://www.google.com"&gt;Link para o Google&lt;/a&gt;
 &lt;img src="logo.png" alt="Logotipo do site"&gt;</code></pre>
-            </section>
-            <section id="html-titulos">
-                <h1>Títulos (Headings)</h1>
-                <p>HTML oferece seis níveis de títulos, de <code>&lt;h1&gt;</code> a <code>&lt;h6&gt;</code>. O <code>&lt;h1&gt;</code> é o mais importante e deve ser usado para o título principal da página, enquanto os outros são subtítulos.</p>
-                <pre><code>&lt;h1&gt;Título Principal&lt;/h1&gt;
+    </section>
+    <section id="html-titulos">
+        <h1>Títulos (Headings)</h1>
+        <p>HTML oferece seis níveis de títulos, de <code>&lt;h1&gt;</code> a <code>&lt;h6&gt;</code>. O <code>&lt;h1&gt;</code> é o mais importante e deve ser usado para o título principal da página, enquanto os outros são subtítulos.</p>
+        <pre><code>&lt;h1&gt;Título Principal&lt;/h1&gt;
 &lt;h2&gt;Subtítulo de Nível 2&lt;/h2&gt;</code></pre>
-            </section>
-            <section id="html-paragrafos">
-                <h1>Parágrafos</h1>
-                <p>A tag <code>&lt;p&gt;</code> é usada para definir um parágrafo de texto. Navegadores automaticamente adicionam um espaço antes e depois de cada parágrafo.</p>
-                <pre><code>&lt;p&gt;Este é o primeiro parágrafo.&lt;/p&gt;
+    </section>
+    <section id="html-paragrafos">
+        <h1>Parágrafos</h1>
+        <p>A tag <code>&lt;p&gt;</code> é usada para definir um parágrafo de texto. Navegadores automaticamente adicionam um espaço antes e depois de cada parágrafo.</p>
+        <pre><code>&lt;p&gt;Este é o primeiro parágrafo.&lt;/p&gt;
 &lt;p&gt;Este é o segundo parágrafo.&lt;/p&gt;</code></pre>
-            </section>
-            <section id="html-estilos">
-                <h1>Estilos (Inline CSS)</h1>
-                <p>O atributo <code>style</code> é usado para adicionar estilos a um elemento, como cor, fonte, tamanho, etc. Esta forma (inline) deve ser usada com moderação, preferindo-se o uso de arquivos CSS externos.</p>
-                <pre><code>&lt;p style="color:red; font-size:18px;"&gt;Este parágrafo é vermelho.&lt;/p&gt;</code></pre>
-            </section>
-            <section id="html-formatacao">
-                <h1>Formatação de Texto</h1>
-                <p>O HTML possui vários elementos para formatar texto com um significado especial:</p>
-                <ul>
-                    <li><code>&lt;b&gt;</code> - <b>Negrito</b> (sem importância semântica)</li>
-                    <li><code>&lt;strong&gt;</code> - <strong>Importante</strong> (negrito com importância semântica)</li>
-                    <li><code>&lt;i&gt;</code> - <i>Itálico</i> (sem importância semântica)</li>
-                    <li><code>&lt;em&gt;</code> - <em>Ênfase</em> (itálico com importância semântica)</li>
-                    <li><code>&lt;mark&gt;</code> - <mark>Texto marcado</mark></li>
-                    <li><code>&lt;small&gt;</code> - <small>Texto pequeno</small></li>
-                </ul>
-            </section>
-            <section id="html-links">
-                <h1>Links</h1>
-                <p>A tag <code>&lt;a&gt;</code> define um hyperlink. O atributo mais importante é o <code>href</code>, que indica o destino do link. Por padrão, links aparecem sublinhados e em azul.</p>
-                <pre><code>&lt;a href="https://easycode.com.br"&gt;Visite o Easy Code&lt;/a&gt;</code></pre>
-            </section>
-            <section id="html-imagens">
-                <h1>Imagens</h1>
-                <p>A tag <code>&lt;img&gt;</code> é usada para incorporar uma imagem em uma página. É uma tag vazia e requer dois atributos: <code>src</code> (o caminho para a imagem) e <code>alt</code> (um texto alternativo para a imagem).</p>
-                <pre><code>&lt;img src="foto.jpg" alt="Foto de um programador" width="500" height="333"&gt;</code></pre>
-            </section>
-            <section id="html-tabelas">
-                <h1>Tabelas</h1>
-                <p>Tabelas são usadas para exibir dados em formato de linhas e colunas. A estrutura básica envolve as tags <code>&lt;table&gt;</code>, <code>&lt;tr&gt;</code> (linha), <code>&lt;th&gt;</code> (cabeçalho) e <code>&lt;td&gt;</code> (célula de dado).</p>
-                <pre><code>&lt;table&gt;
-  &lt;tr&gt;
-    &lt;th&gt;Nome&lt;/th&gt;
-    &lt;th&gt;Idade&lt;/th&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-    &lt;td&gt;João&lt;/td&gt;
-    &lt;td&gt;25&lt;/td&gt;
-  &lt;/tr&gt;
+    </section>
+    <section id="html-estilos">
+        <h1>Estilos (Inline CSS)</h1>
+        <p>O atributo <code>style</code> é usado para adicionar estilos a um elemento, como cor, fonte, tamanho, etc. Esta forma (inline) deve ser usada com moderação, preferindo-se o uso de arquivos CSS externos.</p>
+        <pre><code>&lt;p style="color:red; font-size:18px;"&gt;Este parágrafo é vermelho.&lt;/p&gt;</code></pre>
+    </section>
+    <section id="html-formatacao">
+        <h1>Formatação de Texto</h1>
+        <p>O HTML possui vários elementos para formatar texto com um significado especial:</p>
+        <ul>
+            <li><code>&lt;b&gt;</code> - <b>Negrito</b> (sem importância semântica)</li>
+            <li><code>&lt;strong&gt;</code> - <strong>Importante</strong> (negrito com importância semântica)</li>
+            <li><code>&lt;i&gt;</code> - <i>Itálico</i> (sem importância semântica)</li>
+            <li><code>&lt;em&gt;</code> - <em>Ênfase</em> (itálico com importância semântica)</li>
+            <li><code>&lt;mark&gt;</code> - <mark>Texto marcado</mark></li>
+            <li><code>&lt;small&gt;</code> - <small>Texto pequeno</small></li>
+        </ul>
+    </section>
+    <section id="html-links">
+        <h1>Links</h1>
+        <p>A tag <code>&lt;a&gt;</code> define um hyperlink. O atributo mais importante é o <code>href</code>, que indica o destino do link. Por padrão, links aparecem sublinhados e em azul.</p>
+        <pre><code>&lt;a href="https://easycode.com.br"&gt;Visite o Easy Code&lt;/a&gt;</code></pre>
+    </section>
+    <section id="html-imagens">
+        <h1>Imagens</h1>
+        <p>A tag <code>&lt;img&gt;</code> é usada para incorporar uma imagem em uma página. É uma tag vazia e requer dois atributos: <code>src</code> (o caminho para a imagem) e <code>alt</code> (um texto alternativo para a imagem).</p>
+        <pre><code>&lt;img src="foto.jpg" alt="Foto de um programador" width="500" height="333"&gt;</code></pre>
+    </section>
+    <section id="html-tabelas">
+        <h1>Tabelas</h1>
+        <p>Tabelas são usadas para exibir dados em formato de linhas e colunas. A estrutura básica envolve as tags <code>&lt;table&gt;</code>, <code>&lt;tr&gt;</code> (linha), <code>&lt;th&gt;</code> (cabeçalho) e <code>&lt;td&gt;</code> (célula de dado).</p>
+        <pre><code>&lt;table&gt;
+&lt;tr&gt;
+&lt;th&gt;Nome&lt;/th&gt;
+&lt;th&gt;Idade&lt;/th&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;João&lt;/td&gt;
+&lt;td&gt;25&lt;/td&gt;
+&lt;/tr&gt;
 &lt;/table&gt;</code></pre>
-            </section>
-            <section id="html-listas">
-                <h1>Listas</h1>
-                <p>HTML suporta listas não ordenadas (<code>&lt;ul&gt;</code>, com marcadores) e listas ordenadas (<code>&lt;ol&gt;</code>, com números). Cada item da lista é definido pela tag <code>&lt;li&gt;</code>.</p>
-                <pre><code>&lt;h2&gt;Lista Não Ordenada&lt;/h2&gt;
+    </section>
+    <section id="html-listas">
+        <h1>Listas</h1>
+        <p>HTML suporta listas não ordenadas (<code>&lt;ul&gt;</code>, com marcadores) e listas ordenadas (<code>&lt;ol&gt;</code>, com números). Cada item da lista é definido pela tag <code>&lt;li&gt;</code>.</p>
+        <pre><code>&lt;h2&gt;Lista Não Ordenada&lt;/h2&gt;
 &lt;ul&gt;
-  &lt;li&gt;Café&lt;/li&gt;
-  &lt;li&gt;Leite&lt;/li&gt;
+&lt;li&gt;Café&lt;/li&gt;
+&lt;li&gt;Leite&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h2&gt;Lista Ordenada&lt;/h2&gt;
 &lt;ol&gt;
-  &lt;li&gt;Primeiro passo&lt;/li&gt;
-  &lt;li&gt;Segundo passo&lt;/li&gt;
+&lt;li&gt;Primeiro passo&lt;/li&gt;
+&lt;li&gt;Segundo passo&lt;/li&gt;
 &lt;/ol&gt;</code></pre>
-            </section>
-            <section id="html-classes">
-                <h1>Classes e ID</h1>
-                <p>Os atributos <code>class</code> e <code>id</code> são usados para apontar para elementos específicos no CSS e JavaScript.</p>
-                <ul>
-                    <li>O atributo <code>class</code> pode ser usado em múltiplos elementos para aplicar o mesmo estilo.</li>
-                    <li>O atributo <code>id</code> deve ser único na página e é usado para identificar um único elemento.</li>
-                </ul>
-                <pre><code>&lt;!-- Usando uma classe --&gt;
+    </section>
+    <section id="html-classes">
+        <h1>Classes e ID</h1>
+        <p>Os atributos <code>class</code> e <code>id</code> são usados para apontar para elementos específicos no CSS e JavaScript.</p>
+        <ul>
+            <li>O atributo <code>class</code> pode ser usado em múltiplos elementos para aplicar o mesmo estilo.</li>
+            <li>O atributo <code>id</code> deve ser único na página e é usado para identificar um único elemento.</li>
+        </ul>
+        <pre><code>&lt;!-- Usando uma classe --&gt;
 &lt;p class="texto-destaque"&gt;Este parágrafo tem destaque.&lt;/p&gt;
 
 &lt;!-- Usando um ID --&gt;
 &lt;h1 id="titulo-principal"&gt;Título Único&lt;/h1&gt;</code></pre>
-            </section>
-            <section id="html-layout">
-                <h1>Layout Semântico</h1>
-                <p>HTML5 introduziu novos elementos semânticos que descrevem claramente suas partes para o navegador e para os desenvolvedores, melhorando a acessibilidade e o SEO.</p>
-                <ul>
-                    <li><code>&lt;header&gt;</code> - Define um cabeçalho para um documento ou seção.</li>
-                    <li><code>&lt;nav&gt;</code> - Define um conjunto de links de navegação.</li>
-                    <li><code>&lt;section&gt;</code> - Define uma seção em um documento.</li>
-                    <li><code>&lt;article&gt;</code> - Define conteúdo independente e autocontido.</li>
-                    <li><code>&lt;aside&gt;</code> - Define conteúdo à parte do conteúdo principal (como uma barra lateral).</li>
-                    <li><code>&lt;footer&gt;</code> - Define um rodapé para um documento ou seção.</li>
-                </ul>
-            </section>
+    </section>
+    <section id="html-layout">
+        <h1>Layout Semântico</h1>
+        <p>HTML5 introduziu novos elementos semânticos que descrevem claramente suas partes para o navegador e para os desenvolvedores, melhorando a acessibilidade e o SEO.</p>
+        <ul>
+            <li><code>&lt;header&gt;</code> - Define um cabeçalho para um documento ou seção.</li>
+            <li><code>&lt;nav&gt;</code> - Define um conjunto de links de navegação.</li>
+            <li><code>&lt;section&gt;</code> - Define uma seção em um documento.</li>
+            <li><code>&lt;article&gt;</code> - Define conteúdo independente e autocontido.</li>
+            <li><code>&lt;aside&gt;</code> - Define conteúdo à parte do conteúdo principal (como uma barra lateral).</li>
+            <li><code>&lt;footer&gt;</code> - Define um rodapé para um documento ou seção.</li>
+        </ul>
+    </section>
 
-            <section id="css-introducao">
-                <h1>Introdução ao CSS</h1>
-                <p>CSS (Cascading Style Sheets) é a linguagem que usamos para estilizar e dar vida ao nosso HTML. Ele controla cores, fontes, espaçamentos, layouts e muito mais, separando a apresentação da estrutura do conteúdo.</p>
-            </section>
-            <section id="css-sintaxe">
-                <h1>Sintaxe CSS</h1>
-                <p>Uma regra CSS é composta por um seletor e um bloco de declaração. O seletor aponta para o elemento HTML que você quer estilizar. O bloco contém uma ou mais declarações (propriedade e valor).</p>
-                <pre><code>h1 {
-    color: blue;
-    font-size: 24px;
+    <section id="css-introducao">
+        <h1>Introdução ao CSS</h1>
+        <p>CSS (Cascading Style Sheets) é a linguagem que usamos para estilizar e dar vida ao nosso HTML. Ele controla cores, fontes, espaçamentos, layouts e muito mais, separando a apresentação da estrutura do conteúdo.</p>
+    </section>
+    <section id="css-sintaxe">
+        <h1>Sintaxe CSS</h1>
+        <p>Uma regra CSS é composta por um seletor e um bloco de declaração. O seletor aponta para o elemento HTML que você quer estilizar. O bloco contém uma ou mais declarações (propriedade e valor).</p>
+        <pre><code>h1 {
+color: blue;
+font-size: 24px;
 }</code></pre>
-            </section>
-            <section id="css-seletores">
-                <h1>Seletores CSS</h1>
-                <p>Seletores definem a quais elementos nossos estilos serão aplicados. Os básicos são: seletor de elemento (<code>p</code>), de classe (<code>.minha-classe</code>) e de ID (<code>#meu-id</code>).</p>
-                <pre><code>p { font-family: sans-serif; }
+    </section>
+    <section id="css-seletores">
+        <h1>Seletores CSS</h1>
+        <p>Seletores definem a quais elementos nossos estilos serão aplicados. Os básicos são: seletor de elemento (<code>p</code>), de classe (<code>.minha-classe</code>) e de ID (<code>#meu-id</code>).</p>
+        <pre><code>p { font-family: sans-serif; }
 .alerta { color: red; }
 #logo { width: 150px; }</code></pre>
-            </section>
-            <section id="css-como-usar">
-                <h1>Como Usar CSS</h1>
-                <p>A forma mais recomendada é usar um arquivo CSS externo, linkado no <code>&lt;head&gt;</code> do HTML: <code>&lt;link rel="stylesheet" href="style.css"&gt;</code>.</p>
-            </section>
-            <section id="css-cores">
-                <h1>Cores</h1>
-                <p>Cores em CSS podem ser definidas por nomes (<code>red</code>), códigos HEX (<code>#FF0000</code>), RGB (<code>rgb(255,0,0)</code>) ou RGBA (para transparência).</p>
-                <pre><code>p {
-    color: #333333; /* Cor do texto */
-    background-color: lightblue; /* Cor de fundo */
+    </section>
+    <section id="css-como-usar">
+        <h1>Como Usar CSS</h1>
+        <p>A forma mais recomendada é usar um arquivo CSS externo, linkado no <code>&lt;head&gt;</code> do HTML: <code>&lt;link rel="stylesheet" href="style.css"&gt;</code>.</p>
+    </section>
+    <section id="css-cores">
+        <h1>Cores</h1>
+        <p>Cores em CSS podem ser definidas por nomes (<code>red</code>), códigos HEX (<code>#FF0000</code>), RGB (<code>rgb(255,0,0)</code>) ou RGBA (para transparência).</p>
+        <pre><code>p {
+color: #333333; /* Cor do texto */
+background-color: lightblue; /* Cor de fundo */
 }</code></pre>
-            </section>
-            <section id="css-backgrounds">
-                <h1>Backgrounds</h1>
-                <p>Além da cor, você pode definir uma imagem de fundo e controlar sua repetição, posição e se ela rola com a página.</p>
-                <pre><code>body {
-    background-image: url("fundo.jpg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
+    </section>
+    <section id="css-backgrounds">
+        <h1>Backgrounds</h1>
+        <p>Além da cor, você pode definir uma imagem de fundo e controlar sua repetição, posição e se ela rola com a página.</p>
+        <pre><code>body {
+background-image: url("fundo.jpg");
+background-repeat: no-repeat;
+background-position: center;
+background-size: cover;
 }</code></pre>
-            </section>
-            <section id="css-bordas">
-                <h1>Bordas</h1>
-                <p>A propriedade <code>border</code> permite especificar a largura, o estilo (<code>solid</code>, <code>dotted</code>, etc.) e a cor da borda de um elemento.</p>
-                <pre><code>div {
-    border: 1px solid #ccc;
+    </section>
+    <section id="css-bordas">
+        <h1>Bordas</h1>
+        <p>A propriedade <code>border</code> permite especificar a largura, o estilo (<code>solid</code>, <code>dotted</code>, etc.) e a cor da borda de um elemento.</p>
+        <pre><code>div {
+border: 1px solid #ccc;
 }</code></pre>
-            </section>
-            <section id="css-margens">
-                <h1>Margens</h1>
-                <p>A propriedade <code>margin</code> define o espaçamento <strong>externo</strong> de um elemento, criando espaço ao redor dele.</p>
-                <pre><code>.caixa {
-    margin: 20px; /* 20px em todos os lados */
+    </section>
+    <section id="css-margens">
+        <h1>Margens</h1>
+        <p>A propriedade <code>margin</code> define o espaçamento <strong>externo</strong> de um elemento, criando espaço ao redor dele.</p>
+        <pre><code>.caixa {
+margin: 20px; /* 20px em todos os lados */
 }</code></pre>
-            </section>
-            <section id="css-padding">
-                <h1>Padding</h1>
-                <p>A propriedade <code>padding</code> define o espaçamento <strong>interno</strong> de um elemento, entre a borda e o conteúdo.</p>
-                <pre><code>.caixa {
-    padding: 20px; /* 20px em todos os lados */
+    </section>
+    <section id="css-padding">
+        <h1>Padding</h1>
+        <p>A propriedade <code>padding</code> define o espaçamento <strong>interno</strong> de um elemento, entre a borda e o conteúdo.</p>
+        <pre><code>.caixa {
+padding: 20px; /* 20px em todos os lados */
 }</code></pre>
-            </section>
-            <section id="css-box-model">
-                <h1>CSS Box Model</h1>
-                <p>O Box Model dita que cada elemento HTML é uma caixa composta por: Conteúdo, Padding, Borda e Margem.</p>
-            </section>
-            <section id="css-text">
-                <h1>Texto</h1>
-                <p>CSS oferece várias propriedades para formatar texto, como <code>text-align</code> (alinhamento), <code>text-decoration</code> (sublinhado, etc.) e <code>text-transform</code> (maiúsculas/minúsculas).</p>
-            </section>
-            <section id="css-fonts">
-                <h1>Fontes</h1>
-                <p>Com CSS, você controla a família da fonte (<code>font-family</code>), o peso (<code>font-weight</code>), o tamanho (<code>font-size</code>) e o estilo (<code>font-style</code>).</p>
-            </section>
-            <section id="css-links">
-                <h1>Links</h1>
-                <p>Você pode estilizar os diferentes estados de um link usando pseudo-classes: <code>:link</code> (normal), <code>:visited</code> (visitado), <code>:hover</code> (mouse sobre) e <code>:active</code> (clicado).</p>
-            </section>
-            <section id="css-listas">
-                <h1>Listas</h1>
-                <p>A propriedade <code>list-style-type</code> permite alterar o marcador de uma lista (ex: <code>circle</code>, <code>square</code>, <code>none</code>).</p>
-            </section>
-            <section id="css-tabelas">
-                <h1>Tabelas</h1>
-                <p>Estilizar tabelas geralmente envolve adicionar bordas, padding e usar <code>border-collapse: collapse;</code> para unir as bordas das células.</p>
-            </section>
-            <section id="css-display">
-                <h1>Display</h1>
-                <p>A propriedade <code>display</code> controla como um elemento é exibido. Os valores mais comuns são <code>block</code> (ocupa a largura inteira), <code>inline</code> (ocupa apenas o espaço necessário) e <code>flex</code> (para layouts flexíveis).</p>
-            </section>
-            <section id="css-position">
-                <h1>Position</h1>
-                <p>A propriedade <code>position</code> especifica o método de posicionamento de um elemento. Os valores mais comuns são <code>static</code>, <code>relative</code>, <code>absolute</code> e <code>fixed</code>.</p>
-            </section>
-            <section id="css-z-index">
-                <h1>Z-index</h1>
-                <p>A propriedade <code>z-index</code> especifica a ordem de empilhamento de um elemento posicionado. Um elemento com um z-index maior fica na frente de um elemento com um z-index menor.</p>
-            </section>
-            <section id="css-overflow">
-                <h1>Overflow</h1>
-                <p>A propriedade <code>overflow</code> controla o que acontece quando o conteúdo de um elemento é maior que seu contêiner. Pode ser <code>hidden</code> (cortado), <code>scroll</code> (barras de rolagem) ou <code>auto</code>.</p>
-            </section>
-            <section id="css-unidades">
-                <h1>Unidades</h1>
-                <p>CSS usa várias unidades. <code>px</code> (pixels) é uma unidade fixa. Unidades relativas como <code>%</code>, <code>em</code>, <code>rem</code>, <code>vw</code> (largura da viewport) e <code>vh</code> (altura da viewport) são flexíveis e ótimas para designs responsivos.</p>
-            </section>
-            <section id="css-specificity">
-                <h1>Especificidade</h1>
-                <p>A especificidade é a regra que os navegadores usam para decidir qual estilo CSS aplicar quando há um conflito. Em geral, a ordem de prioridade é: ID > Classe > Elemento.</p>
-            </section>
-        </main>
+    </section>
+
+    <section id="css-box-model">
+        <h1>CSS Box Model</h1>
+        <p>O Box Model (Modelo de Caixa) é um dos conceitos mais fundamentais do CSS. Ele dita que cada elemento HTML na sua página é uma caixa retangular. Essa caixa é composta por quatro camadas:</p>
+        <ul>
+            <li><strong>Conteúdo (Content):</strong> A área onde seu texto e imagens aparecem.</li>
+            <li><strong>Preenchimento (Padding):</strong> Uma área transparente que envolve o conteúdo, criando espaço interno.</li>
+            <li><strong>Borda (Border):</strong> A linha que fica ao redor do padding e do conteúdo.</li>
+            <li><strong>Margem (Margin):</strong> Uma área transparente que fica do lado de fora da borda, criando espaço entre esta e outras caixas.</li>
+        </ul>
+        <p>Pense nele como uma moldura de quadro: o conteúdo é a foto, o padding é o paspatur (a cartolina entre a foto e a moldura), a borda é a moldura em si, e a margem é o espaço entre este quadro e outros na parede.</p>
+        <pre><code>.exemplo-box-model {
+width: 300px;
+padding: 20px;
+border: 5px solid #007BFF;
+margin: 30px;
+background-color: #1a1a2e;
+}
+/* A largura total na tela será:
+300px (width) + 40px (padding) + 10px (border) = 350px
+A margem não entra no cálculo do tamanho do elemento, apenas o afasta dos outros. */
+</code></pre>
+        <p><strong>Dica:</strong> Para facilitar os cálculos, muitos desenvolvedores usam <code>box-sizing: border-box;</code>. Com isso, o padding e a borda são incluídos na largura (<code>width</code>) e altura (<code>height</code>) totais do elemento, em vez de serem somados a elas.</p>
+    </section>
+    <section id="css-text">
+        <h1>Texto</h1>
+        <p>CSS oferece um controle refinado sobre a aparência do texto. As propriedades mais comuns são:</p>
+        <ul>
+            <li><code>text-align</code>: Alinha o texto horizontalmente (<code>left</code>, <code>right</code>, <code>center</code>, <code>justify</code>).</li>
+            <li><code>text-decoration</code>: Adiciona ou remove decorações como sublinhado (<code>underline</code>) ou linha através (<code>line-through</code>). Use <code>none</code> para remover o sublinhado de links.</li>
+            <li><code>text-transform</code>: Transforma o texto para maiúsculas (<code>uppercase</code>), minúsculas (<code>lowercase</code>) ou apenas a primeira letra de cada palavra em maiúscula (<code>capitalize</code>).</li>
+            <li><code>line-height</code>: Define a altura da linha, controlando o espaçamento vertical entre as linhas de um texto.</li>
+            <li><code>letter-spacing</code>: Controla o espaço entre os caracteres.</li>
+        </ul>
+        <pre><code>.paragrafo-estilizado {
+text-align: center;
+text-transform: uppercase;
+line-height: 1.8;
+letter-spacing: 1px;
+color: #007BFF;
+}</code></pre>
+    </section>
+    <section id="css-fonts">
+        <h1>Fontes</h1>
+        <p>Com CSS, você controla a família da fonte (<code>font-family</code>), o peso (<code>font-weight</code>), o tamanho (<code>font-size</code>) e o estilo (<code>font-style</code>).</p>
+        <ul>
+            <li><code>font-family</code>: Especifica a fonte para um elemento. É uma boa prática fornecer uma lista de fontes "fallback" (alternativas), terminando com uma família genérica (como <code>sans-serif</code>).</li>
+            <li><code>font-size</code>: Define o tamanho do texto.</li>
+            <li><code>font-weight</code>: Define o "peso" ou a "grossura" da fonte (ex: <code>normal</code>, <code>bold</code>, ou valores numéricos como <code>400</code>, <code>700</code>).</li>
+            <li><code>font-style</code>: Define o estilo da fonte, mais comumente usado para <code>italic</code> (itálico).</li>
+        </ul>
+        <pre><code>.texto-com-fonte {
+font-family: 'Roboto', Arial, sans-serif;
+font-size: 18px;
+font-weight: bold; /* ou 700 */
+font-style: italic;
+}</code></pre>
+        <p><strong>Dica:</strong> Use o Google Fonts para importar centenas de fontes gratuitas e de alta qualidade para o seu site com uma única linha de código no seu HTML ou CSS.</p>
+    </section>
+    <section id="css-links">
+        <h1>Links</h1>
+        <p>Você pode estilizar os diferentes estados de um link usando <strong>pseudo-classes</strong>. Isso permite que a aparência de um link mude quando o usuário interage com ele.</p>
+        <ul>
+            <li><code>a:link</code>: O estado normal de um link que ainda não foi visitado.</li>
+            <li><code>a:visited</code>: Um link que o usuário já visitou.</li>
+            <li><code>a:hover</code>: Quando o usuário passa o cursor do mouse sobre o link.</li>
+            <li><code>a:active</code>: O momento exato em que o link está sendo clicado.</li>
+        </ul>
+        <pre><code>a {
+text-decoration: none; /* Remove o sublinhado padrão */
+color: #007BFF;
+transition: color 0.2s; /* Adiciona uma transição suave na cor */
+}
+
+a:visited {
+color: #8a2be2; /* Roxo para links já visitados */
+}
+
+a:hover {
+color: #00c3ff; /* Um azul mais claro ao passar o mouse */
+text-decoration: underline; /* Adiciona sublinhado no hover */
+}
+
+a:active {
+color: #ff4500; /* Laranja enquanto está sendo clicado */
+}</code></pre>
+    </section>
+    <section id="css-listas">
+        <h1>Listas</h1>
+        <p>A propriedade <code>list-style-type</code> permite alterar o marcador de uma lista. Você pode usar círculos, quadrados, números romanos, ou até mesmo remover completamente os marcadores.</p>
+        <pre><code>/* Para listas não ordenadas */
+ul.quadrados {
+list-style-type: square;
+}
+
+/* Para listas ordenadas */
+ol.romanos {
+list-style-type: upper-roman;
+}
+
+/* Para remover os marcadores */
+ul.sem-marcador {
+list-style-type: none;
+padding-left: 0; /* Remove o padding padrão para alinhar à esquerda */
+}</code></pre>
+    </section>
+    <section id="css-tabelas">
+        <h1>Tabelas</h1>
+        <p>Estilizar tabelas geralmente envolve adicionar bordas, padding para as células e usar <code>border-collapse</code> para um visual mais limpo.</p>
+        <pre><code>table.customizada {
+width: 100%; /* Faz a tabela ocupar toda a largura disponível */
+border-collapse: collapse; /* Une as bordas das células */
+}
+
+table.customizada th, table.customizada td {
+border: 1px solid #2a2a4a; /* Borda para cada célula */
+padding: 12px; /* Espaçamento interno nas células */
+text-align: left; /* Alinha o texto à esquerda */
+}
+
+table.customizada th {
+background-color: #1a1a2e; /* Cor de fundo para o cabeçalho */
+color: #ffffff;
+}
+
+/* Efeito de "zebra" para melhor legibilidade */
+table.customizada tr:nth-child(even) {
+background-color: #161625;
+}</code></pre>
+    </section>
+    <section id="css-display">
+        <h1>Display</h1>
+        <p>A propriedade <code>display</code> é uma das mais importantes do CSS para controle de layout. Ela define como um elemento se comporta e interage com os outros.</p>
+        <ul>
+            <li><code>display: block;</code>: O elemento ocupa toda a largura disponível, com uma quebra de linha antes e depois. Exemplos: <code>&lt;div&gt;</code>, <code>&lt;p&gt;</code>, <code>&lt;h1&gt;</code>.</li>
+            <li><code>display: inline;</code>: O elemento ocupa apenas o espaço necessário para seu conteúdo e não força uma quebra de linha. Não é possível definir <code>width</code> ou <code>height</code>. Exemplos: <code>&lt;span&gt;</code>, <code>&lt;a&gt;</code>, <code>&lt;strong&gt;</code>.</li>
+            <li><code>display: inline-block;</code>: Um híbrido. O elemento flui com o texto como um elemento <code>inline</code>, mas aceita <code>width</code>, <code>height</code>, <code>margin</code> e <code>padding</code> como um elemento <code>block</code>.</li>
+            <li><code>display: flex;</code>: Ativa o layout Flexbox, um modelo de layout unidimensional poderoso para alinhar e distribuir espaço entre itens em um contêiner.</li>
+            <li><code>display: none;</code>: O elemento é completamente removido da página, como se não existisse no HTML.</li>
+        </ul>
+        <pre>
+            <code>
+                .container-flex {
+                display: flex;
+                justify-content: space-around; /* Distribui os itens com espaço ao redor */
+                background-color: #1a1a2e;
+                padding: 10px;
+                }
+                .item {
+                width: 100px;
+                height: 50px;
+                background-color: #007BFF;
+                }
+            </code>
+</pre>
+    </section>
+    <section id="css-position">
+        <h1>Position</h1>
+        <p>A propriedade <code>position</code> especifica o método de posicionamento usado para um elemento. Ela é usada em conjunto com as propriedades <code>top</code>, <code>right</code>, <code>bottom</code> e <code>left</code>.</p>
+        <ul>
+            <li><code>static</code>: O valor padrão. O elemento segue o fluxo normal da página.</li>
+            <li><code>relative</code>: O elemento é posicionado em relação à sua posição normal. Você pode movê-lo com <code>top</code>/<code>left</code>, mas o espaço original que ele ocupava é preservado.</li>
+            <li><code>absolute</code>: O elemento é posicionado em relação ao ancestral posicionado mais próximo (ou ao corpo da página). Ele é removido do fluxo normal do documento.</li>
+            <li><code>fixed</code>: O elemento é posicionado em relação à viewport (a janela do navegador). Ele não se move, mesmo quando a página é rolada. Ótimo para headers fixos ou botões de "voltar ao topo".</li>
+        </ul>
+        <pre><code>.container-relativo {
+                position: relative;
+                width: 300px;
+                height: 200px;
+                border: 2px solid #ccc;
+                }
+
+                .box-absoluta {
+                position: absolute;
+                bottom: 10px;
+                right: 10px;
+                width: 80px;
+                height: 40px;
+                background-color: #ff4500;
+                }
+/* A .box-absoluta ficará a 10px da parte inferior e 10px da direita
+DENTRO do seu .container-relativo */
+</code></pre>
+    </section>
+    <section id="css-z-index">
+        <h1>Z-index</h1>
+        <p>A propriedade <code>z-index</code> especifica a ordem de empilhamento (profundidade) de um elemento. <strong>Ela só funciona em elementos que têm uma propriedade <code>position</code> diferente de <code>static</code></strong>.</p>
+        <p>Um elemento com um valor de <code>z-index</code> maior ficará na frente de um elemento com um valor menor.</p>
+        <pre><code>
+            .caixa-vermelha {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            width: 150px;
+            height: 150px;
+            background-color: rgba(255, 0, 0, 0.7);
+            z-index: 1; /* Fica atrás */
+            }
+
+            .caixa-azul {
+            position: absolute;
+            top: 60px;
+            left: 60px;
+            width: 150px;
+            height: 150px;
+            background-color: rgba(0, 123, 255, 0.7);
+            z-index: 2; /* Fica na frente */
+            }
+</code></pre>
+    </section>
+    <section id="css-overflow">
+        <h1>Overflow</h1>
+        <p>A propriedade <code>overflow</code> controla o que acontece quando o conteúdo de um elemento é maior do que a sua caixa.</p>
+        <ul>
+            <li><code>visible</code> (padrão): O conteúdo "vaza" para fora da caixa.</li>
+            <li><code>hidden</code>: O conteúdo que vaza é cortado e fica invisível.</li>
+            <li><code>scroll</code>: O conteúdo é cortado, mas barras de rolagem são adicionadas para que o usuário possa ver o resto.</li>
+            <li><code>auto</code>: Adiciona barras de rolagem apenas quando necessário (se o conteúdo vazar).</li>
+        </ul>
+        <pre><code>
+            .caixa-com-overflow {
+            width: 250px;
+            height: 100px;
+            border: 1px solid #ccc;
+            padding: 10px;
+            overflow: auto; /* Melhor opção na maioria dos casos */
+            }
+</code></pre>
+    </section>
+    <section id="css-unidades">
+        <h1>Unidades</h1>
+        <p>CSS usa várias unidades para expressar tamanhos. Elas se dividem em duas categorias principais: absolutas e relativas.</p>
+        <ul>
+            <li><strong>Absolutas:</strong> São fixas e não mudam de tamanho. A mais comum é o <strong><code>px</code></strong> (pixel).</li>
+            <li><strong>Relativas:</strong> São flexíveis e seu tamanho depende de outro valor. São essenciais para criar layouts responsivos.
+                <ul>
+                    <li><code>%</code>: Relativo ao elemento pai.</li>
+                    <li><code>em</code>: Relativo ao tamanho da fonte do elemento atual.</li>
+                    <li><code>rem</code>: (root em) Relativo ao tamanho da fonte do elemento raiz (<code>&lt;html&gt;</code>). É a mais recomendada para fontes.</li>
+                    <li><code>vw</code> / <code>vh</code>: 1% da largura (viewport width) ou altura (viewport height) da tela.</li>
+                </ul>
+            </li>
+        </ul>
+        <pre>
+            <code>
+            html {
+            font-size: 16px; /* Base para o rem */
+            }
+
+            h1 {
+            font-size: 2rem; /* 2 * 16px = 32px */
+            }
+
+            p {
+            font-size: 1rem; /* 1 * 16px = 16px */
+            }
+
+            .container-responsivo {
+            width: 80vw; /* Ocupa 80% da largura da tela */
+            margin: 0 auto; /* Centraliza */
+            }
+</code></pre>
+    </section>
+    <section id="css-specificity">
+        <h1>Especificidade</h1>
+        <p>A especificidade é o conjunto de regras que os navegadores usam para decidir qual estilo CSS aplicar quando múltiplas regras apontam para o mesmo elemento e entram em conflito. A regra com maior especificidade vence.</p>
+        <p>A hierarquia, da mais forte para a mais fraca, é a seguinte:</p>
+        <ol>
+            <li><strong>Estilos Inline:</strong> (ex: <code>&lt;p style="color: red;"&gt;</code>) - Mais forte de todas.</li>
+            <li><strong>ID:</strong> (ex: <code>#meu-id</code>)</li>
+            <li><strong>Classes, pseudo-classes, seletores de atributo:</strong> (ex: <code>.minha-classe</code>, <code>:hover</code>, <code>[type="submit"]</code>)</li>
+            <li><strong>Seletores de elemento e pseudo-elementos:</strong> (ex: <code>p</code>, <code>::before</code>)</li>
+        </ol>
+        <pre><code>&lt;!-- HTML --&gt;
+&lt;p id="paragrafo-unico" class="texto"&gt;Qual cor eu terei?&lt;/p&gt;
+
+&lt;!-- CSS --&gt;
+p { color: blue; }         /* Especificidade: 1 */
+.texto { color: green; }   /* Especificidade: 10 */
+#paragrafo-unico { color: red; } /* Especificidade: 100 */
+
+/* O parágrafo será VERMELHO, pois o seletor de ID é o mais específico. */
+</code></pre>
+    </section>
+    </main>
     </div>
 
 </body>

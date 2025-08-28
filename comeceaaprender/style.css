@@ -27,17 +27,6 @@ body {
 }
 
 /* ---- HEADER ---- */
-.site-header {
-    background-color: var(--surface-color);
-    padding: 0 40px;
-    height: var(--header-height);
-    display: flex;
-    align-items: center;
-    border-bottom: 1px solid var(--border-color);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-}
 
 .logo {
     font-size: 1.8rem;
@@ -186,4 +175,72 @@ body {
         border-left: none;
         padding-left: 0;
     }
+}
+
+/* ---- HEADER ATUALIZADO ---- */
+.topbar_header {
+    background-color: var(--bg-color); /* Fundo correspondente ao body */
+    padding: 0 40px;
+    height: var(--header-height);
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Alinha o logo à esquerda e o menu à direita */
+    border-bottom: 1px solid var(--border-color);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo_header {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: var(--text-color-light);
+    text-decoration: none;
+}
+
+.logo_header span {
+    color: var(--primary-color);
+}
+
+.menu_header {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Espaço entre os grupos de botões e o divisor */
+}
+
+.nav-lista_header,
+.nav-lista1_header {
+    display: flex;
+    gap: 10px; /* Espaço entre os botões */
+}
+
+.header-btn {
+    /* Reset para <button> e <a> parecerem iguais */
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-family: inherit; /* Usa a mesma fonte do body */
+    text-decoration: none;
+    
+    /* Estilo principal */
+    color: var(--text-color);
+    font-size: 0.95rem;
+    font-weight: 500;
+    padding: 8px 16px;
+    border-radius: 6px;
+    
+    /* Animação suave */
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+.header-btn:hover {
+    background-color: var(--surface-color);
+    color: var(--text-color-light);
+}
+
+.divider_header {
+    width: 1px;
+    height: 24px;
+    background-color: var(--border-color);
+    margin: 0 10px;
 }

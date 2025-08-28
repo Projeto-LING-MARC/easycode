@@ -11,3 +11,4 @@ document.getElementById('btn-destaque_header').addEventListener('click', () => {
 document.getElementById('btn-landing-comecar').addEventListener('click', () => {
     window.location.href = "comeceaaprender/index.html";
 });
+
