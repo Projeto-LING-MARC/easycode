@@ -244,3 +244,116 @@ body {
     background-color: var(--border-color);
     margin: 0 10px;
 }
+
+/* ---- MEDIA QUERIES PARA RESPONSIVIDADE ---- */
+
+/* --- Para Tablets e Telas Menores (até 992px de largura) --- */
+@media (max-width: 992px) {
+    /* Esconde a barra de navegação lateral */
+    .sidebar {
+        display: none;
+    }
+
+    /* Ajusta o layout principal para ocupar 100% da tela */
+    .learn-layout {
+        padding: 20px;
+    }
+
+    /* Remove a borda e o espaçamento extra do conteúdo principal */
+    .main-content {
+        border-left: none;
+        padding-left: 0;
+    }
+
+    /* Reduz o espaçamento lateral do header */
+    .topbar_header {
+        padding: 0 20px;
+    }
+
+    /* Diminui um pouco os títulos maiores */
+    .main-content h1 {
+        font-size: 2.2rem;
+    }
+}
+
+/* --- Para Tablets e Telas Menores (até 992px de largura) --- */
+@media (max-width: 992px) {
+    /* Esconde a barra de navegação lateral para dar espaço */
+    .sidebar {
+        display: none;
+    }
+
+    /* Ajusta o layout principal para ocupar 100% da tela */
+    .learn-layout {
+        padding: 20px;
+    }
+
+    /* Remove a borda e o espaçamento extra do conteúdo principal */
+    .main-content {
+        border-left: none;
+        padding-left: 0;
+    }
+
+    /* Reduz o espaçamento lateral do header */
+    .topbar_header {
+        padding: 0 20px;
+    }
+
+    /* Diminui um pouco os títulos maiores */
+    .main-content h1 {
+        font-size: 2.2rem;
+    }
+}
+
+
+/* --- Para Celulares (até 768px de largura) --- */
+@media (max-width: 768px) {
+
+    /* --- 1. AJUSTES GERAIS E TIPOGRAFIA --- */
+    body {
+        /* Melhora a renderização da fonte em alguns dispositivos móveis */
+        -webkit-font-smoothing: antialiased;
+        text-rendering: optimizeLegibility;
+    }
+    .learn-layout {
+        /* Reduz o padding para o conteúdo ter mais espaço */
+        padding: 0 15px;
+        width: 100%;
+    }
+    .main-content h1 {
+        font-size: 1.9rem; /* Tamanho mais adequado para títulos principais */
+        line-height: 1.2;
+    }
+    .main-content h2 {
+        font-size: 1.6rem; /* Tamanho para subtítulos */
+    }
+    .main-content p, .main-content li {
+        font-size: 1rem; /* Tamanho de fonte padrão para leitura */
+    }
+
+    /* --- 2. HEADER FLEXÍVEL E ADAPTÁVEL --- */
+    .topbar_header {
+        flex-wrap: wrap; /* Permite que os itens quebrem para a linha de baixo */
+        justify-content: center; /* Centraliza o conteúdo quando quebrar a linha */
+        padding: 15px;
+        height: auto; /* Altura se ajusta ao conteúdo */
+        gap: 10px 15px; /* Espaço vertical e horizontal entre os itens */
+    }
+    .logo_header {
+        font-size: 1.6rem; /* Reduz um pouco o logo */
+    }
+    .menu_header {
+        flex-wrap: wrap; /* Permite que os botões quebrem a linha */
+        justify-content: center; /* Centraliza os botões */
+        width: 100%; /* Ocupa toda a largura para a centralização funcionar */
+    }
+    .divider_header {
+        display: none; /* Esconde o divisor vertical que não faz sentido em mobile */
+    }
+}
+
+/* Força a quebra de linha nos blocos de código */
+.main-content pre {
+    white-space: pre-wrap; /* Mantém os espaços mas quebra a linha */
+    word-break: break-all;  /* Quebra até mesmo palavras longas sem espaço */
+}
